@@ -3,7 +3,7 @@
     gap: 30px 50px;
 }
 
-.search__continer {
+search-bar, .search__continer {
     grid-column-start: 1;
     grid-column-end: 5;
 }

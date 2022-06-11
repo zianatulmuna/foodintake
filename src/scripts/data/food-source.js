@@ -11,6 +11,12 @@ class SpoonacularSource {
     const response = await fetch(API_ENDPOINT.FOOD_DETAIL(id));
     return response.json();
   }
+
+  static async searchFood(keyword) {
+    const response = await fetch(API_ENDPOINT.FOOD_SEARCH(keyword));
+    const responseJson = await response.json();
+    return responseJson.results;
+  }
 }
 
 export default SpoonacularSource;

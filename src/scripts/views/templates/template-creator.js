@@ -9,7 +9,7 @@ const createFoodItemTemplate = (food) => `
       <div class="list-group-heading">
         <ul class="list-group list-group-horizontal list-group-icon">
           <li class="list-group-item list-group-score line"><i class="fas fa-star-half-alt"></i></li>
-          <li class="list-group-item line"><i class="fab fa-nutritionix"></i></li>
+          <li class="list-group-item line"><i class="fa-brands fa-nutritionix"></i></li>
           <li class="list-group-item"><i class="fas fa-utensils"></i></li>
         </ul>
         <ul class="list-group list-group-horizontal list-group-title">
