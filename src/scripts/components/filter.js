@@ -8,6 +8,26 @@ class FilterMenu extends HTMLElement {
     this.render();
   }
 
+  set clickEvent(event) {
+    this._clickEvent = event;
+    this.render();
+  }
+
+  get value() {
+    const filterValue = {
+      minCal: this.shadowDOM.querySelector('#min-Nutrient').value,
+      maxCal: this.shadowDOM.querySelector('#max-Nutrient').value,
+      minCarbs: this.shadowDOM.querySelector('#min-Carbs').value,
+      maxCarbs: this.shadowDOM.querySelector('#max-Carbs').value,
+      minProtein: this.shadowDOM.querySelector('#min-Protein').value,
+      maxProtein: this.shadowDOM.querySelector('#max-Protein').value,
+      minFat: this.shadowDOM.querySelector('#min-Fat').value,
+      maxFat: this.shadowDOM.querySelector('#max-Fat').value,
+
+    };
+    return filterValue;
+  }
+
   render() {
     this.shadowDOM.innerHTML = `
         <style>
@@ -174,12 +194,6 @@ class FilterMenu extends HTMLElement {
                         <input type="text" id="min-cholesterol" placeholder="Minimum (grams)"><br><br>
                         <input type="text" id="max-cholesterol" placeholder="Maximum (grams)">
                     </div>
-
-                    <div class="sugar-filter">
-                        <h3>Sugar (grams)</h3>
-                        <input type="text" id="min-sugar" placeholder="Minimum (grams)"><br><br>
-                        <input type="text" id="max-sugar" placeholder="Maximum (grams)">
-                    </div>
                 </div>
 
                 <div class="diet-filter">
@@ -294,9 +308,10 @@ class FilterMenu extends HTMLElement {
                     </div>
                 </div>
             </div>
-            <button class="button-filter">Search by Filter</button>
+            <button id="filterButton" class="button-filter" type="submit">Search by Filter</button>
         </div>
         `;
+    this.shadowDOM.querySelector('.button-filter').addEventListener('click', this._clickEvent);
   }
 }
 

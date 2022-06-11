@@ -122,6 +122,12 @@ filter-menu {
     border-right: 1px solid #EFEAD8;
 }
 
+.food-result-message {
+    text-align: center;
+    color: #519259;
+    margin-bottom: 30px;
+}
+
 
 /*
  * food-detail

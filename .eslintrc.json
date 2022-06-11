@@ -21,6 +21,8 @@
         "no-return-assign": 0,
         "import/prefer-default-export": 0,
         "eqeqeq": 0,
-        "no-new": 0
+        "no-new": 0,
+        "no-use-before-define": 0,
+        "no-plusplus": 0
     }
 }
