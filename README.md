@@ -1,1 +1,1 @@
-# foodintake
+# FoodIntake
