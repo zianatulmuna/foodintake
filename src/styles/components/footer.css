@@ -1,0 +1,72 @@
+/*
+  Footer
+*/
+
+footer .first-footer {
+    display: grid;
+    padding: 80px;
+    background-color: #515050;
+    margin-bottom: 24px;
+    color: #EFEAD8;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+footer .navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .first-footer .footer-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* Navigasi */
+footer div h1{
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+footer section .footer-address p{
+    font-size: 16px;
+    line-height: 2;
+}
+
+footer section div ul {
+    padding: 0;
+}
+
+footer section div ul li {
+    list-style: none;
+}
+
+footer section div ul li a {
+    display: block;
+    text-decoration: none;
+    color: #EFEAD8;
+    font-size: 16px;
+    line-height: 2;
+    min-height: 44px;
+}
+
+footer section div ul li a:hover {
+    padding-left: 24px;
+    transition: all, ease, 1s;
+    color: #EFEAD875;
+}
+
+
+/* footer bawah */
+footer {
+    background-color: #515050;
+    margin-bottom: 0;
+}
+
+footer .copyright {
+    text-align: center;
+    color: white;
+    padding: 0 16px 20px 16px;
+}
