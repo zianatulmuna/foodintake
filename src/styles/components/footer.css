@@ -35,6 +35,10 @@ footer section .footer-address p{
     line-height: 2;
 }
 
+footer section div ul {
+    padding: 0;
+}
+
 footer section div ul li {
     list-style: none;
 }
@@ -51,12 +55,14 @@ footer section div ul li a {
 footer section div ul li a:hover {
     padding-left: 24px;
     transition: all, ease, 1s;
+    color: #EFEAD875;
 }
 
 
 /* footer bawah */
 footer {
     background-color: #515050;
+    margin-bottom: 0;
 }
 
 footer .copyright {

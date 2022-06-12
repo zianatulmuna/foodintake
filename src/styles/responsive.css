@@ -34,9 +34,29 @@
         margin-bottom: 40px;
     }
 
+    .about-team {
+        padding: 32px;
+    }
+
+    .team-description {
+        text-align: left;
+    }
+
     footer .first-footer {
         grid-template-columns: 1fr;
         gap: 32px
+    }
+
+    footer .first-footer .footer-header h1 {
+        font-size: 24px
+    }
+
+    footer div h1 {
+        font-size: 18px;
+    }
+
+    footer section .footer-address p {
+        font-size: 14px;
     }
 }
 
@@ -62,8 +82,6 @@
         gap: 32px
     }
 }
-
-
 
 @media screen and (min-width: 800px) {
     .app-bar .app-bar__brand h1 {
@@ -91,28 +109,60 @@
         width: 100%;
     }
 
+    .app-bar .app-bar__navigation ul {
+        margin: auto 0;
+    }
+
     .app-bar .app-bar__navigation ul li {
         display: inline-block;
+        align-items: center;
     }
 
     .app-bar .app-bar__navigation ul li a {
-        display: inline-block;
-        width: 120px;
+        display: flex;
+        align-items: center;
+        width: 150px;
         text-align: center;
-        margin: 20;
+        min-width: 44px;
+        min-height: 44px;
     }
 }
 
-@media screen and (max-width: 850px) {    
+@media screen and (max-width: 800px) {
+    .food {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .food-image {
+        max-width: 90%;
+    }
+
+    .food-fact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
     .app-bar .app-bar__menu button{
         display: flex;
         justify-content: center;
         min-width: 44px;
         min-height: 44px;
+        background-color: #064635;
+        color: white;
+        border-radius: 8px;
     }
 
     .app-bar .app-bar__navigation {
-        height: 100vh;
+        height: 90vh;
     }
 
     .app-bar .app-bar__navigation ul li a {
@@ -135,6 +185,15 @@
 
     .galery-img-4 {
         grid-row: span 1;
+    }
+
+    .team-profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-profile > *{
+        margin-bottom: 24px;
     }
 }
 
@@ -164,4 +223,23 @@
         margin-bottom: 24px;
         height: 50%;
     }
+
+    .about-foodintake {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-foodintake div {
+        margin: 24px 0px;
+        padding: 0px;
+        width: 80%;
+    }
+
+    .about-foodintake div img {
+        max-width: 320px;
+        width: 80%;
+    }
 }
+

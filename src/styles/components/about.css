@@ -1,0 +1,111 @@
+/* about us */
+.about-foodintake {
+    padding: 48px 36px;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #fafafa;
+}
+
+.foodintake-logo  img{
+    width: 320px;
+    box-shadow: 0px 0px 10px 5px#dadada ;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.foodintake-description {
+    padding: 24px;
+    padding-right: 160px;
+}
+
+.foodintake-description h1 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    color: #064635;
+}
+
+.about-team {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 48px 128px
+}
+
+.team-description {
+    margin-bottom: 48px;
+}
+
+.team-description h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #064635;
+}
+
+.team-profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 480px);
+    gap: 56px;
+    row-gap: 56px;
+}
+
+.card-profile {
+    width: 16rem;
+    box-shadow: 0px 0px 10px 5px #dadada ;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-profile:hover {
+    box-shadow: 0px 0px 20px 10px #dadada;
+    transition: all ease .5s;
+}
+
+.card-profile img {
+    background-color: #064635;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
+.card-profile h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c7234;
+}
+
+.card-profile h2 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.card-profile button {
+    min-width: 44px;
+    min-height: 44px;
+    width: 80%;
+    border-radius: 16px;
+    border: solid #96969645;
+    background-color: white;
+}
+
+.card-profile button a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-profile button:hover {
+    background-color: #519259;
+    color: white;
+    transition: all ease .5s;
+}

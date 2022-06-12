@@ -1,6 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import 'regenerator-runtime';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/style.css';
 import '../styles/responsive.css';
+import '../styles/components/foodish.css';
 import App from './views/app';
 
 const app = new App({
