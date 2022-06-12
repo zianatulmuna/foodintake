@@ -21,21 +21,44 @@ const Foodish = {
   },
 
   async afterRender() {
+    const foodContainer = document.querySelector('#foods');
     const searchElement = document.querySelector('search-bar');
     const filterElement = document.querySelector('filter-menu');
+
     const resultHeading = document.querySelector('#message');
     const foodResultMessage = (message) => {
       resultHeading.innerHTML = `<h4>${message}</h4>`;
     };
 
-    const popularfoods = await SpoonacularSource.popularFoods();
+    const dietCheckbox = filterElement.value.dietCheck;
+    let dietList = '';
+    let dietCount = 0;
+    for (let i = 0; i < dietCheckbox.length; i++) {
+      if (dietCheckbox[i].checked) {
+        dietList += `${dietCheckbox[i].value},`;
+        dietCount++;
+      }
+    }
 
-    popularfoods.forEach((food) => {
-      foodResultMessage('Most Popular Foods');
+    const allergieCheckbox = filterElement.value.allergieCheck;
+    let allergieList = '';
+    let allergieCount = 0;
+    for (let i = 0; i < allergieCheckbox.length; i++) {
+      if (allergieCheckbox[i].checked) {
+        allergieList += `${allergieCheckbox[i].value},`;
+        allergieCount++;
+      }
+    }
 
-      const foodContainer = document.querySelector('#foods');
-      foodContainer.innerHTML += createFoodItemTemplate(food);
-    });
+    const popularFoods = async () => {
+      try {
+        const result = await await SpoonacularSource.popularFoods();
+        foodResultMessage('Most Popular Foods');
+        renderResult(result);
+      } catch (message) {
+        fallbackResult(message);
+      }
+    };
 
     const onButtonSearchClicked = async () => {
       try {
@@ -45,14 +68,6 @@ const Foodish = {
       } catch (message) {
         fallbackResult(message);
       }
-    };
-
-    const renderResult = (results) => {
-      const foodContainer = document.querySelector('#foods');
-      foodContainer.innerHTML = '';
-      results.forEach((food) => {
-        foodContainer.innerHTML += createFoodItemTemplate(food);
-      });
     };
 
     const onButtonFilterSearchClicked = async () => {
@@ -67,6 +82,8 @@ const Foodish = {
       if (filterElement.value.maxProtein.length > 0) filterArray.push(`maxProtein=${filterElement.value.maxProtein}`);
       if (filterElement.value.minFat.length > 0) filterArray.push(`minFat=${filterElement.value.minFat}`);
       if (filterElement.value.maxFat.length > 0) filterArray.push(`maxFat=${filterElement.value.maxFat}`);
+      if (dietCount > 0) filterArray.push(`diet=${dietList}`);
+      if (allergieCount > 0) filterArray.push(`intolerances=${allergieList}`);
 
       let filterLine = '&';
 
@@ -74,21 +91,29 @@ const Foodish = {
         filterLine += `${filterArray[i]}&`;
       }
 
-      const foods = await SpoonacularSource.searchFoodbyFilter(filterLine);
-
-      const foodContainer = document.querySelector('#foods');
-      foodContainer.innerHTML = '';
-      foods.forEach((food) => {
-        foodContainer.innerHTML += createFoodItemTemplate(food);
-      });
+      const getFilteredFoods = async () => {
+        const foods = await SpoonacularSource.searchFoodbyFilter(filterLine);
+        renderResult(foods);
+      };
 
       if (filterArray.length > 0) {
         foodResultMessage('Results for Search by Filter');
+        foodContainer.classList.remove('hide-popular-foods');
+        getFilteredFoods();
       } else {
         foodResultMessage('No Result, Please try another filter');
+        foodContainer.classList.add('hide-popular-foods');
       }
     };
 
+    const renderResult = (results) => {
+      foodContainer.innerHTML = '';
+      results.forEach((food) => {
+        foodContainer.innerHTML += createFoodItemTemplate(food);
+      });
+    };
+
+    popularFoods();
     searchElement.clickEvent = onButtonSearchClicked;
     filterElement.clickEvent = onButtonFilterSearchClicked;
   },

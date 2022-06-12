@@ -29,7 +29,7 @@ const createFoodItemTemplate = (food) => `
         </ul>
         </div>
         <h5 class="card-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
-        <p class="card-text food-summary">${food.summary}</p>
+        <p class="card-text food-item-summary">${food.summary}</p>
       </div>   
     </div>
   </div>
@@ -116,6 +116,11 @@ const createFoodDetailTemplate = (food) => `
         `,
       ).join('')}
     </p>
+  </div>
+
+  <div class="food-summary">
+    <h4>Summary</h4>
+    <p>${food.summary.split('.')[0]}. ${food.summary.split('.')[1]}. ${food.summary.split('.')[2]}. ${food.summary.split('.')[3]}. ${food.summary.split('.')[5]}.</p>
   </div>
   
 `;

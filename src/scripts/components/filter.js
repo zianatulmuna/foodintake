@@ -23,6 +23,8 @@ class FilterMenu extends HTMLElement {
       maxProtein: this.shadowDOM.querySelector('#max-Protein').value,
       minFat: this.shadowDOM.querySelector('#min-Fat').value,
       maxFat: this.shadowDOM.querySelector('#max-Fat').value,
+      dietCheck: this.shadowDOM.querySelectorAll('[name~=diet]'),
+      allergieCheck: this.shadowDOM.querySelectorAll('[name~=allergie]'),
 
     };
     return filterValue;
@@ -200,47 +202,47 @@ class FilterMenu extends HTMLElement {
                     <h2>Diet</h2>
 
                     <div class="vegetarian-filter">
-                        <input type="checkbox" name="vegetarian" value="vegetarian" id="chk-vegetarian">
+                        <input type="checkbox" name="diet" value="vegetarian" id="chk-vegetarian">
                         <label for="chk-vegetarian">Vegetarian</label>
                     </div>
 
                     <div class="vegan-filter">
-                        <input type="checkbox" name="vegan" value="vegan" id="chk-vegan">
+                        <input type="checkbox" name="diet" value="vegan" id="chk-vegan">
                         <label for="chk-vegan">Vegan</label>
                     </div>
 
                     <div class="pascetarian-filter">
-                        <input type="checkbox" name="pascetarian" value="pascetarian" id="chk-pascetarian">
+                        <input type="checkbox" name="diet" value="pascetarian" id="chk-pascetarian">
                         <label for="chk-pascetarian">Pascetarian</label>
                     </div>
 
                     <div class="gluten-filter">
-                        <input type="checkbox" name="gluten" value="gluten" id="chk-gluten">
+                        <input type="checkbox" name="diet" value="gluten" id="chk-gluten">
                         <label for="chk-gluten">Gluten Free</label>
                     </div>
 
                     <div class="ketogenic-filter">
-                        <input type="checkbox" name="ketogenic" value="ketogenic" id="chk-ketogenic">
+                        <input type="checkbox" name="diet" value="ketogenic" id="chk-ketogenic">
                         <label for="chk-ketogenic">Gluten Free</label>
                     </div>
 
                     <div class="paleo-filter">
-                        <input type="checkbox" name="paleo" value="paleo" id="chk-paleo">
+                        <input type="checkbox" name="diet" value="paleo" id="chk-paleo">
                         <label for="chk-paleo">Paleo</label>
                     </div>
 
                     <div class="primal-filter">
-                        <input type="checkbox" name="primal" value="primal" id="chk-primal">
+                        <input type="checkbox" name="diet" value="primal" id="chk-primal">
                         <label for="chk-primal">Primal</label>
                     </div>
 
                     <div class="low-fodmap-filter">
-                        <input type="checkbox" name="low-fodmap" value="low-fodmap" id="chk-low-fodmap">
+                        <input type="checkbox" name="diet" value="low-fodmap" id="chk-low-fodmap">
                         <label for="chk-low-fodmap">Low Fodmap</label>
                     </div>
 
                     <div class="whole-filter">
-                        <input type="checkbox" name="whole" value="whole" id="chk-whole">
+                        <input type="checkbox" name="diet" value="whole" id="chk-whole">
                         <label for="chk-whole">Whole 30</label>
                     </div>
                 </div>
@@ -248,62 +250,62 @@ class FilterMenu extends HTMLElement {
                 <div class="allergies-filter">
                     <h2>Allergies</h2>
                     <div class="peanut-filter">
-                        <input type="checkbox" name="peanut" value="peanut" id="chk-peanut">
+                        <input type="checkbox" name="allergie" value="peanut" id="chk-peanut">
                         <label for="chk-peanut">Peanut</label>
                     </div>
 
                     <div class="seafood-filter">
-                        <input type="checkbox" name="seafood" value="seafood" id="chk-peanut">
+                        <input type="checkbox" name="allergie" value="seafood" id="chk-peanut">
                         <label for="chk-seafood">Seafood</label>
                     </div>
 
                     <div class="dairy-filter">
-                        <input type="checkbox" name="peanut" value="dairy" id="chk-dairy">
+                        <input type="checkbox" name="allergie" value="dairy" id="chk-dairy">
                         <label for="chk-dairy">Dairy</label>
                     </div>
 
                     <div class="egg-filter">
-                        <input type="checkbox" name="egg" value="egg" id="chk-egg">
+                        <input type="checkbox" name="allergie" value="egg" id="chk-egg">
                         <label for="chk-egg">Egg</label>
                     </div>
 
                     <div class="gluten-filter">
-                        <input type="checkbox" name="gluten" value="gluten" id="chk-gluten">
+                        <input type="checkbox" name="allergie" value="gluten" id="chk-gluten">
                         <label for="chk-gluten">Gluten</label>
                     </div>
 
                     <div class="grain-filter">
-                        <input type="checkbox" name="grain" value="grain" id="chk-grain">
+                        <input type="checkbox" name="allergie" value="grain" id="chk-grain">
                         <label for="chk-grain">Grain</label>
                     </div>
 
                     <div class="sesame-filter">
-                        <input type="checkbox" name="sesame" value="sesame" id="chk-sesame">
+                        <input type="checkbox" name="allergie" value="sesame" id="chk-sesame">
                         <label for="chk-sesame">Sesame</label>
                     </div>
 
                     <div class="shellfish-filter">
-                        <input type="checkbox" name="shellfish" value="shellfish" id="chk-shellfish">
+                        <input type="checkbox" name="allergie" value="shellfish" id="chk-shellfish">
                         <label for="chk-shellfish">Shellfish</label>
                     </div>
 
                     <div class="soy-filter">
-                        <input type="checkbox" name="soy" value="soy" id="chk-soy">
+                        <input type="checkbox" name="allergie" value="soy" id="chk-soy">
                         <label for="chk-soy">Soy</label>
                     </div>
 
                     <div class="sulfite-filter">
-                        <input type="checkbox" name="sulfite" value="sulfite" id="chk-sulfite">
+                        <input type="checkbox" name="allergie" value="sulfite" id="chk-sulfite">
                         <label for="chk-sulfite">Sulfite</label>
                     </div>
 
                     <div class="tree-nut-filter">
-                        <input type="checkbox" name="tree-nut" value="tree-nut" id="chk-tree-nut">
+                        <input type="checkbox" name="allergie" value="tree-nut" id="chk-tree-nut">
                         <label for="chk-tree-nut">Tree Nut</label>
                     </div>
 
                     <div class="wheat-filter">
-                        <input type="checkbox" name="wheat-nut" value="wheat-nut" id="chk-wheat">
+                        <input type="checkbox" name="allergie" value="wheat-nut" id="chk-wheat">
                         <label for="chk-wheat">Wheat</label>
                     </div>
                 </div>
