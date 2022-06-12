@@ -20,8 +20,8 @@ const createFoodItemTemplate = (food) => `
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item line">${food.healthScore}</li>
           <li class="list-group-item line">${food.nutrition.nutrients
-    .filter((nutrient) => nutrient.name === 'Calories')
-    .map((nutrient) => `
+            .filter((nutrient) => nutrient.name === 'Calories')
+            .map((nutrient) => `
                 <p>${parseInt(nutrient.amount)}</p>
             `).join('')}
           </li>
@@ -38,16 +38,20 @@ const createFoodItemTemplate = (food) => `
 const createFoodDetailTemplate = (food) => `
   <h2 class="food-title">${food.title}</h2>
   <img class="food-image" src="${food.image}" alt="${food.title}">
+
   <div calss="food-information">    
     <p class="food-source">from <a href="${food.sourceUrl}">${food.sourceUrl.split('/')[2]}</a></p>
+
+
     <p class="food-type">Food Type : ${food.dishTypes
-    .map((name) => `<p class="food-type">${name} </p>`).join('')
-}
+      .map((name) => `<p class="food-type">${name} </p>`).join('')
+      }
     </p>
     <div class="food-action">
       <button class="food-button-like"><i class="far fa-bookmark"></i> Save Recipe</button>
     </div>
   </div>
+
   <div class="food-fact">
     <h4>Food Facts</h4>
     <table>
@@ -79,37 +83,38 @@ const createFoodDetailTemplate = (food) => `
       <li class="percentCarbs" style="width: ${parseInt(food.nutrition.caloricBreakdown.percentCarbs)}%;">${parseInt(food.nutrition.caloricBreakdown.percentCarbs)}%</li>            
     </div>
     <table>${food.nutrition.nutrients
-    .map(
-      (nutrient) => `
+      .map(
+        (nutrient) => `
           <tr>
             <td>${nutrient.name}</td>
             <td>${parseInt(nutrient.amount)} ${nutrient.unit}</td>
             <td>${parseInt(nutrient.percentOfDailyNeeds)}%</td>
           </tr>
         `,
-    ).join('')}
+      ).join('')}
     </table>
   </div>
+
   <div class="food-ingredient">
     <h4>Ingredients</h4>
     <p>${food.extendedIngredients
-    .map(
-      (ingredient) => `
+      .map(
+        (ingredient) => `
           <p>${ingredient.original}</p>
         `,
-    ).join('')}
+      ).join('')}
     </p>
     <h4>Instructions</h4>
     <p>${food.analyzedInstructions
-    .map(
-      (instruction) => `
+      .map(
+        (instruction) => `
           <ol>${instruction.steps
-    .map(
-      (step) => `
+        .map(
+          (step) => `
             <li>${step.step}</li>`,
-    ).join('')}</ol>
+          ).join('')}</ol>
         `,
-    ).join('')}
+      ).join('')}
     </p>
   </div>
   
