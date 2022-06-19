@@ -2,35 +2,33 @@
 /* eslint-disable radix */
 
 const createFoodItemTemplate = (food) => `
-<div class="col">
-    <div class="card h-100 w-300">
-      <img src="${food.image}" class="card-img-top food-item-image" alt="${food.title}">
-      <div class="card-body">      
-      <div class="list-group-heading">
-        <ul class="list-group list-group-horizontal list-group-icon">
-          <li class="list-group-item list-group-score line"><i class="fas fa-star-half-alt"></i></li>
-          <li class="list-group-item line"><i class="fa-brands fa-nutritionix"></i></li>
-          <li class="list-group-item"><i class="fas fa-utensils"></i></li>
-        </ul>
-        <ul class="list-group list-group-horizontal list-group-title">
-          <li class="list-group-item list-group-score line">Score</li>
-          <li class="list-group-item line">Calories</li>
-          <li class="list-group-item">Serving</li>
-        </ul>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item line">${food.healthScore}</li>
-          <li class="list-group-item line">${food.nutrition.nutrients
+  <div class="food-item">
+    <img src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <div class="food-item-info">
+      <ul class="food-item-info-icon">
+          <li><i class="fas fa-star-half-alt icon"></i></li>
+          <li>Score</li>
+          <li>${food.healthScore}</li>           
+      </ul>
+      <ul class="food-item-info-mid">
+        <li><i class="fa-brands fa-nutritionix icon"></i></li>
+        <li>Calories</li>
+        <li>${food.nutrition.nutrients
             .filter((nutrient) => nutrient.name === 'Calories')
             .map((nutrient) => `
                 <p>${parseInt(nutrient.amount)}</p>
             `).join('')}
-          </li>
-          <li class="list-group-item">${food.servings}</li>
-        </ul>
-        </div>
-        <h5 class="card-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
-        <p class="card-text food-item-summary">${food.summary}</p>
-      </div>   
+        </li>   
+      </ul>
+      <ul>
+        <li><i class="fas fa-utensils icon"></i></li>
+        <li>Serving</li>
+        <li>${food.servings}</li>
+      </ul>
+    </div>
+    <div class="food-item-content">
+      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
+      <p class="food-item-summary">${food.summary}</p>
     </div>
   </div>
 `;

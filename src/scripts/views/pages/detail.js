@@ -7,10 +7,9 @@ const Detail = {
   async render() {
     return `
         <div class="content">
-            <div class="content__item">
+            <div class="content-item">
                 <div id="food" class="food"></div>
             </div>
-            <div id="likeButtonContainer"></div>
         </div>
       `;
   },

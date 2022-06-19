@@ -7,7 +7,7 @@ import Bookmark from '../views/pages/bookmark';
 const routes = {
   '/': Home,
   '/home': Home,
-  '/tentang-kami': AboutUs,
+  '/about-us': AboutUs,
   '/foodish': Foodish,
   '/detail/:id': Detail,
   '/bookmark': Bookmark,

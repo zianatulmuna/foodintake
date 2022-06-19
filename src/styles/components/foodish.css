@@ -1,10 +1,10 @@
 .foodish-continer {
     display: grid;
-    gap: 30px 56px;
+    gap: 20px 56px;
     margin: auto 56px;
 }
 
-search-bar, .search__continer {
+search-bar, .food-result-message, .show-filter {
     grid-column-start: 1;
     grid-column-end: 5;
 }
@@ -15,11 +15,6 @@ filter-menu {
     overflow-y: auto;
 }
 
-.content {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    background-color: #f1f1f1;
-}
 
 .bookmark-continer {
     margin: 24px 56px;
@@ -61,35 +56,88 @@ filter-menu {
 }
 
 .search__item button:hover {
-    opacity: 80%;
+    background-color: #4c6b4f;
 }
+
+/*
+ * filter-search
+ */
+ .show-filter {
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 20px;
+    display: none;
+ }
+
+ .show-filter button {
+    border: none;
+    align-items: center;
+    background-color: none;
+    color: #519259;
+ }
+
+ .show-filter button:hover {
+    color: #3b8043;
+ }
+
 
 
 /*
- * content-item
+ * food-item-template
  */
 
- .food-content__item {
+.foods {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.food-item {
     width: 100%;
-    margin-bottom: 50px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
-
-/*
- * food-template
- */
-
-.card {
-    border-radius: 20px;
+.food-item-image {
+    width: 100%;
 }
 
-.card-title a {
+.food-item-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 10pt;
+    padding: 16px;
+}
+
+.food-item-info ul {
+    height: 60px;
+}
+
+.food-item-info-mid {
+    border-right: 1px solid #EFEAD8;
+    border-left: 1px solid #EFEAD8;
+}
+
+.food-item-info .icon {
+    color: #9FC088;
+}
+
+.food-item-content {
+    padding: 0 18px;
+    margin-bottom: 18px;
+}
+
+.food-item-title a {
     color: #CC704B;
     text-decoration: none;
 }
 
-.card-title a:hover {
-    opacity: 80%;
+.food-item-title a:hover {
+    color: #be603b;
 }
 
 .food-item-summary {
@@ -102,41 +150,11 @@ filter-menu {
     -webkit-box-orient: vertical;
 }
 
-.food-item-image {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.list-group-heading {
-    margin-bottom: 18px;
-    font-size: 10pt;
-}
-
-.list-group-icon li {
-    color: #9FC088;
-}
-
-.list-group-item {
-    line-height: 1.5em;
-    width: 100%;
-    border: none;
-    text-align: center;
-    padding: 0;    
-}
-
-.line {
-    border-right: 1px solid #EFEAD8;
-}
-
 .food-result-message {
     text-align: center;
-    color: #519259;
+    color: #000;
     margin-bottom: 30px;
-}
-
-.hide-popular-foods {
-    display: none;
-}
+} 
 
 
 /*
@@ -330,4 +348,12 @@ table {
 
 .food-action button:hover {
     background-color: #519259;
+}
+
+/*
+ * others
+ */
+
+.hide-style {
+    display: none;
 }

@@ -25,6 +25,7 @@ class FilterMenu extends HTMLElement {
         maxFat: this.shadowDOM.querySelector('#max-Fat').value,
         dietCheck: this.shadowDOM.querySelectorAll('[name~=diet]'),
         allergieCheck: this.shadowDOM.querySelectorAll('[name~=allergie]'),
+        closeButton: this.shadowDOM.querySelector('.close'),
   
       };
       return filterValue;
@@ -47,16 +48,18 @@ class FilterMenu extends HTMLElement {
                 padding: 30px;
                 overflow: hidden; 
                 background-color: #EFEAD8;
+                border: 1px solid #d3d3d3;
                 margin: auto auto 30px 30px;
                 border-radius: 20px;
             }
             
             .filter-box h1 {
                 font-size: 18px;
+                line-height: 0;
             }
             
             .filter-list {
-                padding: 24px;
+                padding: 10px 24px;
                 border-radius: 16px;
                 overflow: auto;
                 width: 100%;           
@@ -68,17 +71,24 @@ class FilterMenu extends HTMLElement {
             
             .filter-list h3 {
                 font-size: 16px;
+                line-height: 0;
             }
             
             .filter-list .nutrient-filter div {
-                padding-bottom: 24px;
+                padding-bottom: 18px;
+                margin-bottom: 26px;
                 border-bottom: #d5d5d5 solid;
             }
             
             .filter-list .nutrient-filter div input {
-                padding: 6px;
-                border-radius: 8px;
-                border-width: 1px;
+                padding: 6px 10px;
+                border-radius: 5px;
+                width: 50%;
+                display: inline;
+                max-width: 78px;
+                margin-top: 5px;
+                margin-right: 8px;
+                border: none;
             }
             
             .checkbox {
@@ -143,6 +153,7 @@ class FilterMenu extends HTMLElement {
             div input[type="checkbox"]:checked:after {
                 display: block;
             }
+
             .button-filter {
                 border: none;
                 margin-top: 20px;
@@ -153,40 +164,108 @@ class FilterMenu extends HTMLElement {
                 border-radius: 20px;
                 align-items: left;
             }
+
             .button-filter:hover {
                 opacity: 80%;
             }
+
+            .close {
+                color: #aaaaaa;
+                text-align: right;
+                font-size: 28px;
+                font-weight: bold;
+                width: 100%;
+                line-height: 0;
+                display: none;
+            }
+
+            .close:hover, .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+              }
+
+            @media screen and (max-width: 650px) {
+                .filter-box {
+                    margin: 0 auto;
+                }
+                .close {
+                    display: block;
+                }
+            }
+
+            @media only screen and (min-width: 650px) and (max-width: 1200px) {
+                .filter-box {
+                    margin: 0 auto;
+                    width: 80%;
+                    top: 0;
+                }
+
+                .filter-list {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .nutrient-filter, .diet-filter, .allergies-filter {
+                    width: 100%;
+                    margin: 10px;
+                }
+
+                .filter-list .nutrient-filter div input {
+                    max-width: 70px;
+                    margin-bottom: 0;
+                }
+
+                .diet-filter {
+                    border: none;
+                }
+
+                .button-filter {
+                    margin-top: 0;
+                }
+
+                .filter-list .nutrient-filter div {
+                    padding-bottom: 10px;
+                    margin-bottom: 0;
+                }
+
+                .close {
+                    display: block;
+                }               
+            }
             </style>
+
             <div class="filter-box">
+                <span id="closeButton" class="close">&times;</span>
                 <h1>Filter Search</h1>
                 <div class="filter-list">
                     <div class="nutrient-filter">
                         <h2>Nutrients</h2>
                         
-                        <div class="calories-filter">
+                        <div>
                             <h3>Calories</h3>
-                            <input type="text" id="min-Nutrient" placeholder="Minimum Kalori"><br><br>
-                            <input type="text" id="max-Nutrient" placeholder="Maximum Kalori">
+                            <input type="text" id="min-Nutrient" placeholder="Min">
+                            <input type="text" id="max-Nutrient" placeholder="Max">
                         </div>
-                        <div class="carbs-filter">
+                        <div>
                             <h3>Carbs (grams)</h3>
-                            <input type="text" id="min-Carbs" placeholder="Minimum (grams)"><br><br>
-                            <input type="text" id="max-Carbs" placeholder="Maximum (grams)">
+                            <input type="text" id="min-Carbs" placeholder="Min">
+                            <input type="text" id="max-Carbs" placeholder="Max">
                         </div>
-                        <div class="protein-filter">
+                        <div>
                             <h3>Protein (grams)</h3>
-                            <input type="text" id="min-Protein" placeholder="Minimum (grams)"><br><br>
-                            <input type="text" id="max-Protein" placeholder="Maximum (grams)">
+                            <input type="text" id="min-Protein" placeholder="Min">
+                            <input type="text" id="max-Protein" placeholder="Max">
                         </div>
-                        <div class="fat-filter">
+                        <div>
                             <h3>Fat (grams)</h3>
-                            <input type="text" id="min-Fat" placeholder="Minimum (grams)"><br><br>
-                            <input type="text" id="max-Fat" placeholder="Maximum (grams)">
+                            <input type="text" id="min-Fat" placeholder="Min">
+                            <input type="text" id="max-Fat" placeholder="Max">
                         </div>
-                        <div class="cholesterol-filter">
+                        <div>
                             <h3>Cholesterol (grams)</h3>
-                            <input type="text" id="min-cholesterol" placeholder="Minimum (grams)"><br><br>
-                            <input type="text" id="max-cholesterol" placeholder="Maximum (grams)">
+                            <input type="text" id="min-cholesterol" placeholder="Min">
+                            <input type="text" id="max-cholesterol" placeholder="Max">
                         </div>
                     </div>
                     <div class="diet-filter">

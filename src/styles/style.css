@@ -93,10 +93,10 @@ ul {
 
 .app-bar .app-bar__navigation ul li a {
     display: inline-block;
+    margin: 0;
     text-decoration: none;
     color: black;
     padding: 8px;
-    margin-bottom: 5px;
     width: 100%;
 }
 
