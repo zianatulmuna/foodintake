@@ -1,5 +1,15 @@
-# Halaman Homepage
--NavBar
--Footer
+FoodIntake
+==
+Table of Contents
+- Homepage
+- Halaman Menu Makanan Foodish
+- Bar Pencarian Makanan
+- Filter Makanan
+- Halaman Detail Makanan
+- Credit
 
-Belum terinstall Service Worker dan Manifest.json
+Homepage
+==
+Halaman Foodish
+==
+Credit

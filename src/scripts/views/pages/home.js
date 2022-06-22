@@ -10,7 +10,12 @@ const Home = {
       <button onclick="window.location.href='#/foodish'">Menu</button>
     </div>
     <div class="tagline-img">
-      <img src="/img/food-1.png">
+      <picture>
+                <source media="(max-width: 650px)" srcset="./img/food-1-small.jpg">
+                <img 
+                    src='./img/food-1-large.jpg' 
+                    alt="Semangkok Makanan"></img>
+            </picture>
     </div>
   </section>
 
@@ -20,7 +25,12 @@ const Home = {
     </div>
     <div class="tagline-why">
       <div class="img-container">
-        <img src="/img/food-2.png">
+        <picture>
+                <source media="(max-width: 650px)" srcset="./img/food-2-small.jpg">
+                <img 
+                    src='./img/food-2-large.jpg' 
+                    alt="Semangkok Makanan"></img>
+            </picture>
       </div>
       <p>Gizi yang optimal sangat penting untuk pertumbuhan normal serta perkembangan fisik dan kecerdasan bayi, anak-anak, serta seluruh kelompok umur. Gizi baik membuat berat badan normal atau sehat, tubuh tidak mudah terkena penyakit infeksi, produktivitas kerja meningkat serta terlindung dari penyakit kronis dan kematian dini akibat penyakit.
         <br><br>
@@ -33,11 +43,36 @@ const Home = {
       <h1>Galery</h1>
     </div>
     <div class="galery-grid">
-      <img class="galery-img-1" src="/img/food-3.png">
-      <img class="galery-img-2" src="/img/food-4.png">
-      <img class="galery-img-3" class="image-grid-col-2" src="/img/food-5.png">
-      <img class="galery-img-4" class="image-grid-col-2" src="/img/food-6.png">
-      <img class="galery-img-5" src="/img/food-7.png">
+    <picture class="galery-img-1">
+                <source media="(max-width: 650px)" srcset="./img/food-3-small.jpg">
+                <img 
+                    src='./img/food-3-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-2">
+                <source media="(max-width: 650px)" srcset="./img/food-4-small.jpg">
+                <img 
+                    src='./img/food-4-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-3 image-grid-col-2">
+                <source media="(max-width: 650px)" srcset="./img/food-5-small.jpg">
+                <img 
+                    src='./img/food-5-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-4 image-grid-col-2">
+                <source media="(max-width: 650px)" srcset="./img/food-6-small.jpg">
+                <img 
+                    src='./img/food-6-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-5">
+                <source media="(max-width: 650px)" srcset="./img/food-7-small.jpg">
+                <img 
+                    src='./img/food-7-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
     </div>
   </section>
         `;

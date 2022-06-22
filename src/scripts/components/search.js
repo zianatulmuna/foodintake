@@ -27,6 +27,7 @@ class SearchBar extends HTMLElement {
         display: flex;
         align-items: center;
     }
+
     .search__item input {
         width: 100%;
         align-items: center;
@@ -37,6 +38,7 @@ class SearchBar extends HTMLElement {
         border: 2px solid #5F7161;
         max-height: 56px;
     }
+
     .search__item button {
         padding: 18px 40px;
         background-color: #5F7161;
@@ -47,6 +49,7 @@ class SearchBar extends HTMLElement {
         cursor: pointer;
         max-height: 56px;
     }
+    
     .search__item button:hover {
         opacity: 80%;
     }

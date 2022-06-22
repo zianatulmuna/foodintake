@@ -8,7 +8,7 @@
     background-color: #fafafa;
 }
 
-.foodintake-logo  img{
+.foodintake-logo img{
     width: 320px;
     box-shadow: 0px 0px 10px 5px#dadada ;
     border-radius: 16px;
@@ -107,5 +107,10 @@
 .card-profile button:hover {
     background-color: #519259;
     color: white;
+    transition: all ease .5s;
+}
+
+.card-profile button a:hover {
+    
     transition: all ease .5s;
 }

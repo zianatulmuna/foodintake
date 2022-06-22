@@ -26,7 +26,7 @@ const AboutUs = {
       </div>
 
       <div class="card-profile">
-        <img src="/icon/user.png" alt="Seoarang mahasiswa">
+        <img src="/user/zian.png" alt="Seoarang mahasiswa">
         <h1>Zianatul Muna</h1>
         <h2>Back-End | Developer</h2>
         <button><a href="https://www.linkedin.com/">Connect</a></button>

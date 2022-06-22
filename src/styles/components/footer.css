@@ -1,6 +1,7 @@
-/*
-  Footer
-*/
+footer {
+    background-color: #515050;
+    bottom: 0;
+}
 
 footer .first-footer {
     display: grid;
@@ -56,13 +57,6 @@ footer section div ul li a:hover {
     padding-left: 24px;
     transition: all, ease, 1s;
     color: #EFEAD875;
-}
-
-
-/* footer bawah */
-footer {
-    background-color: #515050;
-    margin-bottom: 0;
 }
 
 footer .copyright {

@@ -1,0 +1,59 @@
+{
+  "name": "FoodIntake",
+  "short_name": "FoodIntake Lite",
+  "description": "Food Recipe with their nutrients",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6D8B74",
+  "icons": [
+    {
+        "src": "/icon/foodintake-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }
+  ]
+}

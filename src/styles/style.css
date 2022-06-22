@@ -2,6 +2,7 @@
 @import url('./components/main.css');
 @import url('./components/about.css');
 @import url('./components/foodish.css');
+@import url('./components/bookmark.css');
 
 * {
     padding: 0;
@@ -93,10 +94,10 @@ ul {
 
 .app-bar .app-bar__navigation ul li a {
     display: inline-block;
+    margin: 0;
     text-decoration: none;
     color: black;
     padding: 8px;
-    margin-bottom: 5px;
     width: 100%;
 }
 
@@ -134,3 +135,7 @@ main {
     background-color: #f1f1f1;
 }
 
+.content {
+    margin: 50px auto;
+    min-height: 100%;
+}
