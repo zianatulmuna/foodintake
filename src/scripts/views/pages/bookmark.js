@@ -5,11 +5,11 @@ const Bookmark = {
   async render() {
     return `
     <div class="bookmark-continer">
-      <h1>Bookmarked Food</h1>
+      <h2><i class="fa-solid fa-bookmark icon-title"></i> Bookmarked Food</h2>
       <div class="food-content">
       <div id="message" class="food-result-message"></div>
-            <div class="food-content__item">
-                <div id="foods" class="row row-cols-1 row-cols-md-3 g-4 food-list">
+            <div class="food-content-item">
+                <div id="foods" class="foods">
       </div>
         </div>
     </div>

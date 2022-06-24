@@ -1,5 +1,6 @@
 import SpoonacularSource from '../../data/food-source';
 import { createFoodItemTemplate } from '../templates/template-creator';
+import DrawerInitiator from '../../utils/drawer-initiator';
 import '../../components/filter';
 import '../../components/search';
 
@@ -14,7 +15,7 @@ const Foodish = {
       <div id="message" class="food-result-message"></div>
       <filter-menu></filter-menu>
       <div class="food-content">      
-        <div class="food-content__item">
+        <div class="food-content-item">
           <div id="foods" class="foods"></div>
         </div>
     </div>
@@ -25,10 +26,9 @@ const Foodish = {
     const foodContainer = document.querySelector('#foods');
     const searchElement = document.querySelector('search-bar');
     const filterElement = document.querySelector('filter-menu');
-    const showFilterElement = document.querySelector('.show-filter');
-    const resultHeading = document.querySelector('#message');  
-    
-    const popularFoods = async () => {
+    const resultHeading = document.querySelector('#message');
+
+    const getPopularFoods = async () => {
       try {
         const result = await await SpoonacularSource.popularFoods();
         foodResultMessage('Most Popular Foods');
@@ -43,6 +43,17 @@ const Foodish = {
       renderResult(foods);
     };
 
+    const renderResult = (results) => {
+      foodContainer.innerHTML = '';
+      results.forEach((food) => {
+        foodContainer.innerHTML += createFoodItemTemplate(food);
+      });
+    };
+
+    const foodResultMessage = (message) => {
+      resultHeading.innerHTML = `<h4>${message}</h4>`;
+    };
+
     const onButtonSearchClicked = async () => {
       try {
         const result = await SpoonacularSource.searchFood(searchElement.value);
@@ -53,7 +64,7 @@ const Foodish = {
       }
     };
 
-    const onButtonFilterSearchClicked = async () => {      
+    const onButtonFilterSearchClicked = async () => {
       const dietCheckbox = filterElement.value.dietCheck;
       let dietList = '';
       let dietCount = 0;
@@ -93,7 +104,7 @@ const Foodish = {
 
         for (let i = 0; i < filterArray.length; i++) {
           filterLine += `${filterArray[i]}&`;
-        } 
+        }
 
         foodResultMessage('Results for Search by Filter');
         foodContainer.classList.remove('hide-style');
@@ -102,28 +113,17 @@ const Foodish = {
         foodResultMessage('No Result, Please try another filter');
         foodContainer.classList.add('hide-style');
       }
-    };
+    };    
 
-    const renderResult = (results) => {
-      foodContainer.innerHTML = '';
-      results.forEach((food) => {
-        foodContainer.innerHTML += createFoodItemTemplate(food);
-      });
-    };
-
-    const foodResultMessage = (message) => {
-      resultHeading.innerHTML = `<h4>${message}</h4>`;
-    };
-
-    popularFoods();
+    getPopularFoods();
     searchElement.clickEvent = onButtonSearchClicked;
     filterElement.clickEvent = onButtonFilterSearchClicked;
-    filterElement.value.closeButton.onclick = () => {
-      filterElement.style.display = "none";
-    }
-    showFilterElement.onclick = () => {
-      filterElement.style.display = "block";
-    }
+
+    DrawerInitiator.init({
+      button: document.querySelector('#showFilterButton'),
+      content: filterElement.value.closeButton,
+      drawer: filterElement,
+    });
   },
 };
 

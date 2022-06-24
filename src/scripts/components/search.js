@@ -23,7 +23,7 @@ class SearchBar extends HTMLElement {
        .search__item {
         margin: 0 auto;
         padding: 50px;
-        width: 70%;
+        width: 60%;
         display: flex;
         align-items: center;
     }
@@ -31,7 +31,7 @@ class SearchBar extends HTMLElement {
     .search__item input {
         width: 100%;
         align-items: center;
-        padding: 18px 30px;
+        padding: 20px 30px;
         border: none;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
@@ -40,14 +40,14 @@ class SearchBar extends HTMLElement {
     }
 
     .search__item button {
-        padding: 18px 40px;
+        padding: 20px 40px;
         background-color: #5F7161;
         border: none;
         color: white;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         cursor: pointer;
-        max-height: 56px;
+        max-height: 60px;
     }
     
     .search__item button:hover {

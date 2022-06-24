@@ -12,6 +12,17 @@ class SpoonacularSource {
     return response.json();
   }
 
+  static async similarFood(id) {
+    const response = await fetch(API_ENDPOINT.FOOD_SIMILAR(id));
+    return response.json();
+  }
+
+  static async foodVideos(keyword) {
+    const response = await fetch(API_ENDPOINT.FOOD_VIDEOS(keyword));
+    const responseJson = await response.json();
+    return responseJson.videos;
+  }
+
   static async searchFood(keyword) {
     const response = await fetch(API_ENDPOINT.FOOD_SEARCH(keyword));
     const responseJson = await response.json();
