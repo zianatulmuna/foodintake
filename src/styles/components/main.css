@@ -36,7 +36,7 @@ main .first-main .tagline button {
     background-color: #5F7161;
     padding: 16px 24px;
     border-radius: 8px;
-    color: #EFEAD8;
+    color: white;
     min-width: 44px;
     min-height: 44px;
     margin-top: 64px;
@@ -111,7 +111,7 @@ main .main-galery{
 
 main .main-galery .galery-heading  h1{
     font-size: 32px;
-    color: #6D8B74;
+    color: #5F7161;
     margin: 24px;
 }
 

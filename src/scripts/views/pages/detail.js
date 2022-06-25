@@ -1,14 +1,14 @@
 import UrlParser from '../../routes/url-parser';
 import SpoonacularSource from '../../data/food-source';
 import SaveButtonInitiator from '../../utils/save-button-initiator';
-import { createFoodDetailTemplate } from '../templates/template-creator';
+import { createFoodDetailTemplate, createSkeletonDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
         <div class="content">
             <div class="content-item">
-                <div id="food" class="food"></div>
+                <div id="food" class="food">${createSkeletonDetailTemplate(1)}</div>
             </div>
         </div>
       `;

@@ -1,9 +1,41 @@
-/* eslint-disable indent */
-/* eslint-disable radix */
+const createSkeletonItemTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i++) {
+    template += `
+      <div class="food-item">
+        <img class="food-item-image skeleton lazyload" data-src="./etc/placeholder.png" alt="skeleton">   
+        <div class="food-item-info">
+          <ul class="food-item-info-icon">
+              <li class="skeleton">Logo</li>
+              <li class="skeleton">Score</li>
+              <li class="skeleton">5.0</li>           
+          </ul>
+          <ul class="food-item-info-mid">
+            <li class="skeleton">Logo</li>
+            <li class="skeleton">Calories</li>
+            <li class="skeleton">69</li>   
+          </ul>
+          <ul>
+            <li class="skeleton">Logo</i></li>
+            <li class="skeleton">Serving</li>
+            <li class="skeleton">8</li>
+          </ul>
+        </div>
+        <div class="food-item-content">
+          <h5 class="skeleton">Lorem ipsum dolor sit.</h5>
+          <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
+        </div>
+      </div>
+    `;
+  }
+
+  return template;
+};
 
 const createFoodItemTemplate = (food) => `
   <div class="food-item">
-    <img class="lazyload" data-src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <img data-src="${food.image}" class="food-item-image lazyload" alt="${food.title}">   
     <div class="food-item-info">
       <ul class="food-item-info-icon">
           <li><i class="fas fa-star-half-alt icon"></i></li>
@@ -32,6 +64,43 @@ const createFoodItemTemplate = (food) => `
     </div>
   </div>
 `;
+
+const createSkeletonDetailTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i++) {
+    template += `
+    <h2 class="food-title skeleton">Lorem ipsum dolor sit.</h2>
+    <img class="food-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">
+  
+    <div class="food-information skeleton">    
+      <p class="food-source skeleton">from www.pinkwhen.com</p>
+      <p class="food-type skeleton">Food Type : lunch main course main dish dinner</p>
+      <div id="saveButtonContainer" class="food-action skeleton"></div>
+    </div>
+  
+    <div class="food-fact skeleton">
+      <h4 class="skeleton"></h4>
+      <table>
+        <tr>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+        </tr>
+        <tr>
+          <td class="food-fact-title"><i class="skeleton></i> Health Score</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Weight Watcher Points</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Ready In Minutes</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Servings</td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    `;
+  }
+  return template;
+};
 
 const createFoodDetailTemplate = (food) => `
   <h2 class="food-title">${food.title}</h2>
@@ -121,11 +190,41 @@ const createFoodDetailTemplate = (food) => `
   
 `;
 
+const createSkeletonBookmarkTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i++) {
+    `
+    <div class="food-item">
+      <img class="food-item-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">   
+    <div class="bookmark-item-info">
+      <ul class="bookmark-item-info-icon">
+          <li class="skeleton">Logo</li>
+          <li class="skeleton">Score</li>
+          <li class="skeleton">24</li>           
+      </ul>
+      <ul>
+        <li class="skeleton">Logo</li>
+        <li class="skeleton">Serving</li>
+        <li class="skeleton">24</li>
+      </ul>
+    </div>
+    <div class="food-item-content">
+    <h5 class="skeleton">Lorem ipsum dolor sit.</h5>
+    <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
+    </div>
+  </div>
+    `
+  }
+
+  return template;
+};
+
 const createBookmarkItemTemplate = (food) => `
 <div class="food-item">
-    <img class="lazyload" data-src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <img class="food-item-image lazyload" data-src="${food.image}"  alt="${food.title}">   
     <div class="bookmark-item-info">
-      <ul class="food-item-info-icon">
+      <ul class="bookmark-item-info-icon">
           <li><i class="fas fa-star-half-alt icon"></i></li>
           <li>Score</li>
           <li>${food.healthScore}</li>           
@@ -161,4 +260,7 @@ export {
   createBookmarkItemTemplate,
   createSaveButtonTemplate,
   createSavedButtonTemplate,
+  createSkeletonItemTemplate,
+  createSkeletonBookmarkTemplate,
+  createSkeletonDetailTemplate,
 };

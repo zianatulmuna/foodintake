@@ -40,6 +40,7 @@ body {
 
 .app-bar__brand img {
     width: 36px;
+    height: auto;
     margin-right: 16px;
 }
 
@@ -106,30 +107,6 @@ ul {
     color: #6D8B74;
 }
 
-/* .app-bar .app-bar__navigation ul button {
-    background-color: #6D8B74;
-    padding: 12px 32px;
-    border-radius: 8px;
-    border-color: transparent;
-    font-weight: 500;
-    letter-spacing: 4px;
-    font-size: 14px;
-    color: #EFEAD8;
-} */
-
-/* .app-bar .app-bar__navigation ul button:hover {
-    background-color: #5F7161;
-} */
-
-/* .app-bar .app-bar__navigation ul button a {
-    text-decoration: none;
-    color: #EFEAD8;
-} */
-
-/*
-  Main Content
-*/
-
 main {
     flex: 1;
     background-color: #f1f1f1;
@@ -138,4 +115,19 @@ main {
 .content {
     margin: 50px auto;
     min-height: 100%;
+}
+
+.skeleton {
+    user-select: none;
+    background-color: #cacaca;
+    color: #0000;
+    background-image: linear-gradient(to right, rgb(192, 192, 192), rgb(228, 228, 228));
+    background-size: 200% 100%;
+    animation: anmBg 1s linear 3;
+}
+
+@keyframes  anmBg {
+    to {
+        background-position: -170% 0;
+    }
 }

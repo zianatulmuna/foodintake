@@ -1,7 +1,13 @@
 @media screen and (min-width: 550px) {
     .foods {
         grid-template-columns: repeat(2, 1fr);
-    } 
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .foodish-continer {
+        margin: auto 24px;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -78,19 +84,11 @@
     }
 }
 
-
-
 @media screen and (min-width: 800px) {
-    .app-bar .app-bar__brand h1 {
-      font-size: 2em;
-    }
-
     .foods {
         grid-template-columns: repeat(2, 1fr);
     } 
 }
-
-
 
 @media screen and (max-width: 800px) {
     .food {
@@ -161,7 +159,7 @@
     }
 
     .app-bar .app-bar__navigation {
-        height: 90vh;
+        height: 100vh;
     }
 
     .app-bar .app-bar__navigation ul li a {

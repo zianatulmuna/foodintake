@@ -10,6 +10,10 @@
     height: 60px;
 }
 
+.bookmark-item-info-icon {
+    border-right: 1px solid #EFEAD8;
+}
+
 .bookmark-item-info .icon {
     color: #9FC088;
 }

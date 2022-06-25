@@ -4,7 +4,9 @@
     margin: auto 56px;
 }
 
-search-bar, .food-result-message, .show-filter {
+search-bar,
+.food-result-message,
+.show-filter {
     grid-column-start: 1;
     grid-column-end: 5;
 }
@@ -15,15 +17,10 @@ filter-menu {
     overflow-y: auto;
 }
 
-
 .bookmark-continer {
     margin: 24px 56px;
 }
 
-/*
- * search
- */
- 
 .search__item {
     margin: 0 auto;
     padding: 50px;
@@ -59,36 +56,26 @@ filter-menu {
     background-color: #4c6b4f;
 }
 
-/*
- * filter-search
- */
- .show-filter {
+.show-filter {
     text-align: center;
     margin-bottom: 36px;
     margin-top: 20px;
     display: none;
- }
+}
 
- .show-filter button {
+.show-filter button {
     border: none;
     align-items: center;
     background-color: none;
     color: #519259;
- }
+}
 
- .show-filter button:hover {
+.show-filter button:hover {
     color: #3b8043;
- }
-
-
-
-/*
- * food-item-template
- */
+}
 
 .foods {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 32px;
 }
@@ -103,6 +90,7 @@ filter-menu {
 
 .food-item img {
     width: 100%;
+    height: auto;
 }
 
 .food-item-info {
@@ -146,7 +134,8 @@ filter-menu {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 
@@ -154,12 +143,7 @@ filter-menu {
     text-align: center;
     color: #000;
     margin-bottom: 30px;
-} 
-
-
-/*
- * food-detail
- */
+}
 
 .food {
     margin: 0 auto;
@@ -170,7 +154,7 @@ filter-menu {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     text-align: left;
-    color: #000;  
+    color: #000;
     background-color: #fff;
     padding: 30px;
     border-radius: 30px;
@@ -240,7 +224,7 @@ filter-menu {
 
 .food-nutrition .food-brackdown {
     display: flex;
-    border-radius: 20px;    
+    border-radius: 20px;
     margin-bottom: 20px;
 }
 
@@ -273,19 +257,19 @@ filter-menu {
 
 .food-ingredient {
     grid-column-start: 1;
-    grid-column-end: 2;    
+    grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
 .food-summary {
     grid-column-start: 1;
-    grid-column-end: 3; 
+    grid-column-end: 3;
 }
 
 table {
     width: 100%;
-    
+
 }
 
 .food-nutrition .food-brackdown-title {
@@ -313,7 +297,7 @@ table {
 }
 
 
-.food-type{
+.food-type {
     display: inline;
     font-size: 10pt;
     color: #5F7161;
@@ -349,10 +333,6 @@ table {
 .food-action button:hover {
     background-color: #519259;
 }
-
-/*
- * others
- */
 
 .hide-style {
     display: none;

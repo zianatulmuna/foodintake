@@ -1,5 +1,5 @@
 import SpoonacularSource from '../../data/food-source';
-import { createFoodItemTemplate } from '../templates/template-creator';
+import { createFoodItemTemplate, createSkeletonItemTemplate } from '../templates/template-creator';
 import '../../components/filter';
 import '../../components/search';
 
@@ -15,7 +15,9 @@ const Foodish = {
       <filter-menu></filter-menu>
       <div class="food-content">      
         <div class="food-content__item">
-          <div id="foods" class="foods"></div>
+          <div id="foods" class="foods">
+            ${createSkeletonItemTemplate(20)}
+          </div>
         </div>
     </div>
       `;
