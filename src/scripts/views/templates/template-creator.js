@@ -4,32 +4,28 @@ import CONFIG from '../../globals/config';
 const createFoodItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
     <div class="food-item-info">
-      <ul class="food-item-info-icon">
-          <li><i class="fas fa-star-half-alt icon"></i></li>
-          <li>Score</li>
-          <li>${food.healthScore}</li>           
+      <ul>
+          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
+          <li class="food-item-info-text">Health</li>
       </ul>
       <ul class="food-item-info-mid">
-        <li><i class="fa-brands fa-nutritionix icon"></i></li>
-        <li>Calories</li>
-        <li>${food.nutrition.nutrients
+        <li><i class="fa-brands fa-nutritionix icon"></i> 
+            ${food.nutrition.nutrients
     .filter((nutrient) => nutrient.name === 'Calories')
     .map((nutrient) => `
-                <p>${parseInt(nutrient.amount)}</p>
-            `).join('')}
-        </li>   
+                      ${parseInt(nutrient.amount)}
+                  `).join('')}</li>
+        <li class="food-item-info-text">Calories</li> 
       </ul>
       <ul>
-        <li><i class="fas fa-utensils icon"></i></li>
-        <li>Serving</li>
-        <li>${food.servings}</li>
+        <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
+        <li class="food-item-info-text">Servings</li>
       </ul>
-    </div>
-    <div class="food-item-content">
-      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
+    </div> 
       <p class="food-item-summary">${food.summary}</p>
-    </div>
+
   </div>
 `;
 
@@ -166,24 +162,20 @@ const createVideoFoodItemTemplate = (video) => `
 `;
 
 const createBookmarkItemTemplate = (food) => `
-<div class="food-item">
+  <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
     <div class="food-item-info">
-      <ul class="food-item-info-icon">
-          <li><i class="fas fa-star-half-alt icon"></i></li>
-          <li>Score</li>
-          <li>${food.healthScore}</li>           
+      <ul>
+          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
+          <li class="food-item-info-text">Health</li>
       </ul>
       <ul>
-        <li><i class="fas fa-utensils icon"></i></li>
-        <li>Serving</li>
-        <li>${food.servings}</li>
+        <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
+        <li class="food-item-info-text">Servings</li>
       </ul>
-    </div>
-    <div class="food-item-content">
-      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
+    </div> 
       <p class="food-item-summary">${food.summary}</p>
-    </div>
   </div>
 `;
 
@@ -199,6 +191,107 @@ const createSavedButtonTemplate = () => `
   </button>
 `;
 
+const createSkeletonItemTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i++) {
+    template += `
+      <div class="food-item">
+        <div class="food-item-image skeleton">Skeleton</div>
+        <div class="food-item-info">
+          <ul class="food-item-info-icon">
+              <li class="skeleton">Logo</li>
+              <li class="skeleton">Score</li>
+              <li class="skeleton">5.0</li>           
+          </ul>
+          <ul class="food-item-info-mid">
+            <li class="skeleton">Logo</li>
+            <li class="skeleton">Calories</li>
+            <li class="skeleton">69</li>   
+          </ul>
+          <ul>
+            <li class="skeleton">Logo</i></li>
+            <li class="skeleton">Serving</li>
+            <li class="skeleton">8</li>
+          </ul>
+        </div>
+        <div class="food-item-content">
+          <h5 class="skeleton">How to make a healthy food.</h5>
+          <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
+        </div>
+      </div>
+    `;
+  }
+
+  return template;
+};
+
+const createSkeletonDetailTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i++) {
+    template += `
+    <h2 class="food-title skeleton">How to make a healthy food</h2>
+    <img class="food-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">
+  
+    <div class="food-information skeleton">    
+      <p class="food-source skeleton">from www.pinkwhen.com</p>
+      <p class="food-type skeleton">Food Type : lunch main course main dish dinner</p>
+      <div id="saveButtonContainer" class="food-action skeleton"></div>
+    </div>
+  
+    <div class="food-fact skeleton">
+      <h4 class="skeleton"></h4>
+      <table>
+        <tr>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+          <td class="food-fact-value skeleton">10</td>
+        </tr>
+        <tr>
+          <td class="food-fact-title"><i class="skeleton></i> Health Score</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Weight Watcher Points</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Ready In Minutes</td>
+          <td class="food-fact-title"><i class="skeleton"></i> Servings</td>
+        </tr>
+      </table>
+    </div>
+    `;
+  }
+  return template;
+};
+
+const createSkeletonBookmarkTemplate = (count) => {
+  const template = '';
+
+  for (let i = 0; i < count; i++) {
+    `
+    <div class="food-item">
+      <img class="food-item-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">   
+    <div class="bookmark-item-info">
+      <ul class="bookmark-item-info-icon">
+          <li class="skeleton">Logo</li>
+          <li class="skeleton">Score</li>
+          <li class="skeleton">24</li>           
+      </ul>
+      <ul>
+        <li class="skeleton">Logo</li>
+        <li class="skeleton">Serving</li>
+        <li class="skeleton">24</li>
+      </ul>
+    </div>
+    <div class="food-item-content">
+    <h5 class="skeleton">Lorem ipsum dolor sit.</h5>
+    <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
+    </div>
+  </div>
+    `;
+  }
+
+  return template;
+};
+
 export {
   createFoodItemTemplate,
   createFoodDetailTemplate,
@@ -207,4 +300,7 @@ export {
   createBookmarkItemTemplate,
   createSaveButtonTemplate,
   createSavedButtonTemplate,
+  createSkeletonItemTemplate,
+  createSkeletonBookmarkTemplate,
+  createSkeletonDetailTemplate,
 };

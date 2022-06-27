@@ -1,6 +1,12 @@
+
 .content {
     display: grid;
     gap: 15px;
+}
+
+.detail-page {
+    background-color: #f1f1f1;
+    margin: 0;
 }
 
 .content-main {
@@ -23,7 +29,6 @@
     font-size: 11pt;
     background-color: #fff;
     padding: 30px 40px;
-    border-radius: 30px;
 }
 
 .food h4 {
@@ -259,7 +264,7 @@
 
 .content-aside h5 {
     font-size: 14pt;
-    color: #4e5e50;
+    color: #CC704B;
 }
 
 .content-aside a {
@@ -285,6 +290,10 @@
     transition: 0.1s;
 }
 
+.food, .similar-food, .video-similar-food {
+    border-radius: 10px;
+}
+
 /*
  * similar-food
  */
@@ -292,11 +301,10 @@
 .food-trivia {
     width: 100%;
     max-width: 860px;
-    min-width: 350px;
     margin: 0 auto;
     text-align: left;
     font-size: 11pt;
-    
+    border: 2px solid #F0BB62;
     color: #000;  
     background-color: #fff;
     border-radius: 20px;
@@ -322,7 +330,6 @@
 .similar-food {    
     width: 100%;
     max-width: 860px;
-    min-width: 350px;
     margin: 0 auto;
     margin-top: 20px;
     display: grid;
@@ -331,7 +338,6 @@
     font-size: 11pt;
     color: #000;  
     background-color: #fff;
-    border-radius: 20px;
     padding-bottom: 20px;
 }
 
@@ -372,7 +378,6 @@
     color: #000;  
     background-color: #fff;
     padding-bottom: 10px;
-    border-radius: 20px;    
 }
 
 .video-food-item {

@@ -1,7 +1,5 @@
-/* eslint-disable max-len */
-import UrlParser from '../../routes/url-parser';
 import SpoonacularSource from '../../data/food-source';
-import { createFoodItemTemplate } from '../templates/template-creator';
+import { createFoodItemTemplate, createSkeletonItemTemplate } from '../templates/template-creator';
 import DrawerInitiator from '../../utils/drawer-initiator';
 import '../../components/filter';
 import '../../components/search';
@@ -13,21 +11,21 @@ const Foodish = {
     <div class="foodish-continer">
       <search-bar></search-bar>
       <div class="show-filter">
-        <button id="showFilterButton">Search by Filter &#128899</button>
+        <button id="showFilterButton">Search by <span>Filter &#128899</span></button>
       </div>
       <div id="message" class="food-result-message"></div>
       <filter-menu></filter-menu>
       <div class="food-content">      
         <div class="food-content-item">
-          <div id="foods" class="foods"></div>
+          <div id="foods" class="foods">
+            ${createSkeletonItemTemplate(20)}
+          </div>
         </div>
         <div class="food-content-page">
           <div class="pagination">
-            <button id="buttonPagePrev">&laquo;</button>
             <button id="buttonPage1">1</button>
             <button id="buttonPage2">2</button>
             <button id="buttonPage3">3</button>
-            <button id="buttonPageNext">&raquo;</button>
           </div>
         </div>
     </div>
@@ -41,11 +39,9 @@ const Foodish = {
     const pageContainer = document.querySelector('.food-content-page');
     const resultHeading = document.querySelector('#message');
 
-    const pagePrev = document.querySelector('#buttonPagePrev');
     const page1 = document.querySelector('#buttonPage1');
     const page2 = document.querySelector('#buttonPage2');
     const page3 = document.querySelector('#buttonPage3');
-    const pageNext = document.querySelector('#buttonPageNext');
 
     const getPopularFoods = async (offset) => {
       try {
@@ -154,37 +150,23 @@ const Foodish = {
 
       let offset = 0;
       getPopularFoods(offset);
-      PageInitiator.activePage1(page1, page2, page3, pagePrev, pageNext);
+      PageInitiator.activePage1(page1, page2, page3);
 
       page1.addEventListener('click', () => {
-        PageInitiator.activePage1(page1, page2, page3, pagePrev, pageNext);
+        PageInitiator.activePage1(page1, page2, page3);
         offset = 0;
         getPopularFoods(offset);
       });
 
       page2.addEventListener('click', () => {
-        PageInitiator.activePage2(page1, page2, page3, pagePrev, pageNext);
+        PageInitiator.activePage2(page1, page2, page3);
         offset = 12;
         getPopularFoods(offset);
       });
 
       page3.addEventListener('click', () => {
-        PageInitiator.activePage3(page1, page2, page3, pagePrev, pageNext);
+        PageInitiator.activePage3(page1, page2, page3);
         offset = 24;
-        getPopularFoods(offset);
-      });
-
-      pageNext.addEventListener('click', () => {
-        offset += 12;
-        if (offset == 12) PageInitiator.activePage2(page1, page2, page3, pagePrev, pageNext);
-        else if (offset == 24) PageInitiator.activePage3(page1, page2, page3, pagePrev, pageNext);
-        getPopularFoods(offset);
-      });
-
-      pagePrev.addEventListener('click', () => {
-        offset -= 12;
-        if (offset == 0) PageInitiator.activePage1(page1, page2, page3, pagePrev, pageNext);
-        else if (offset == 12) PageInitiator.activePage2(page1, page2, page3, pagePrev, pageNext);
         getPopularFoods(offset);
       });
     };

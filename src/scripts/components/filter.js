@@ -184,6 +184,16 @@ class FilterMenu extends HTMLElement {
                 cursor: pointer;
               }
 
+            @media screen and (max-width: 550px) {
+                .filter-box {
+                    background-color: #fff;
+                }
+
+                .filter-list .nutrient-filter div input {
+                    border: 1px solid #d3d3d3;
+                }
+            }
+
             @media screen and (max-width: 650px) {
                 .filter-box {
                     margin: 0 auto;

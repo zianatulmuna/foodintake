@@ -1,17 +1,22 @@
 import UrlParser from '../../routes/url-parser';
 import SpoonacularSource from '../../data/food-source';
 import SaveButtonInitiator from '../../utils/save-button-initiator';
-import { createFoodDetailTemplate, createSimilarFoodItemTemplate, createVideoFoodItemTemplate } from '../templates/template-creator';
+import {
+  createFoodDetailTemplate,
+  createSimilarFoodItemTemplate,
+  createVideoFoodItemTemplate,
+  createSkeletonDetailTemplate,
+} from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
-        <div class="content">
-            <div class="content-main">
-              <div id="food" class="food"></div>
-              <div id="foodNutrition"></div>
-            </div>
-            <div class="content-aside">
+        <div class="content detail-page">
+          <div class="content-main">
+            <div id="food" class="food">${createSkeletonDetailTemplate(1)}</div>
+            <div id="foodNutrition"></div>
+          </div>
+          <div class="content-aside">
               <div class="food-trivia">
                 <h4><i class="fas fa-lightbulb icon-header"></i> Food Trivia</h4>
                 <div id="foodTrivia" class="aside-food-item"></div>

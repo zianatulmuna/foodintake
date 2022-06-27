@@ -33,15 +33,17 @@ filter-menu.open {
  .show-filter button {
     border: none;
     align-items: center;
-    background-color: none;
-    color: #519259;
+    background-color: white;
+   
  }
 
  .show-filter button:hover {
     color: #3b8043;
  }
 
-
+ .show-filter button span {
+    color: #CC704B;
+ }
 
 /*
  * food-item-template
@@ -71,11 +73,13 @@ filter-menu.open {
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
     font-size: 10pt;
-    padding: 16px;
+    padding: 12px 10px;
+    margin: 0;
 }
 
 .food-item-info ul {
-    height: 60px;
+    height: 40px;
+    margin: 0;
 }
 
 .food-item-info-mid {
@@ -83,18 +87,38 @@ filter-menu.open {
     border-left: 1px solid #EFEAD8;
 }
 
-.food-item-info .icon {
-    color: #9FC088;
+.food-item-info ul:first-child  .icon{
+    color: #F0BB62;
 }
 
-.food-item-content {
-    padding: 0 18px;
-    margin-bottom: 18px;
+.food-item-info .icon {
+    color: #9FC088;
+    margin-right: 4px;
+}
+
+.food-item-info ul:last-child  .icon{
+    color: #CC704B;
+}
+
+.food-item-info-text {
+    font-size: 9pt;
+}
+
+.food-item-title {
+    padding: 20px 18px;
+    height: 70px;
+    margin-bottom: 30px;
 }
 
 .food-item-title a {
-    color: #CC704B;
+    color: #000;
+    font-size: 14pt;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .food-item-title a:hover {
@@ -102,16 +126,18 @@ filter-menu.open {
 }
 
 .food-item-summary {
+    padding: 0 18px;
     color: #000;
     font-size: 10pt;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
 .food-result-message {
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     color: #000;
     margin-bottom: 30px;
@@ -122,6 +148,10 @@ filter-menu.open {
  */
 .bookmark-continer {
     margin: 56px 86px;
+}
+
+.bookmark-continer h2 {
+    font-family: 'Quicksand', sans-serif;
 }
 
 .bookmark-continer .food-item-info {
@@ -166,7 +196,7 @@ filter-menu.open {
     float: left;
     padding: 8px 20px;
     text-decoration: none;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
 }
   
 .pagination button.active {
@@ -180,7 +210,7 @@ filter-menu.open {
     cursor: not-allowed;
   }
 .pagination button:hover:not(.active) {
-    background-color: #ddd;
+    background-color: #fff;
 }
   
 .pagination button:first-child {
