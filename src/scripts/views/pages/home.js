@@ -16,7 +16,7 @@ const Home = {
 
   <section class="second-main">
     <div class="tagline-heading">
-      <h1>Kenapa Kita Harus Memenuhi Gizi</h1>
+      <h1>Kenapa Kita Harus Memenuhi <span>Gizi?</span></h1>
     </div>
     <div class="tagline-why">
       <div class="img-container">
@@ -28,9 +28,25 @@ const Home = {
       </p>
     </div>
   </section>
+  
+  <section class="third-main">
+    <div class="tagline-heading">
+      <h1>Rekomendasi Berdasarkan Tipe Makanan</h1>
+    </div>
+      <li><a href="#/foodish"><img src="/img/food type/1.png"></a></li>
+      <li><a href="#/foodish"><img src="/img/food type/2.png"></a></li>
+      <li><a href="#/foodisht"><img src="/img/food type/3.png"></a></li>
+      <li><a href="#/foodish"><img src="/img/food type/4.png"></a></li>
+      <li><a href="#/foodish"><img src="/img/food type/5.png"></a></li>
+      <li><a href="#/foodish"><img src="/img/food type/6.png"></a></li>
+      <div class="food-type-text">
+        <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
+      </p>
+  </section>
+
   <section class="main-galery">
     <div class="galery-heading">
-      <h1>Galery</h1>
+      <h1>Gallery</h1>
     </div>
     <div class="galery-grid">
       <img class="galery-img-1" src="/img/food-3.png">

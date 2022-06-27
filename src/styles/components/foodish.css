@@ -9,8 +9,6 @@ search-bar, .food-result-message, .show-filter {
     grid-column-end: 5;
 }
 
-
-
 filter-menu {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -140,8 +138,6 @@ filter-menu.open {
 }
 
 
-
-
 /*
  * others
  */
@@ -150,3 +146,49 @@ filter-menu.open {
     display: none;
 }
 
+/*
+ * pagination
+ */
+
+.food-content-page {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.pagination {
+    display: inline-block;
+    border: none;
+    margin: 0 auto;
+}
+  
+.pagination button {
+    color: black;
+    float: left;
+    padding: 8px 20px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+  
+.pagination button.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination button.disabled {
+    opacity: 0.65; 
+    cursor: not-allowed;
+  }
+.pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+  
+.pagination button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+  
+.pagination button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

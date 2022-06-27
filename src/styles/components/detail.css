@@ -22,7 +22,7 @@
     color: #000;  
     font-size: 11pt;
     background-color: #fff;
-    padding: 30px;
+    padding: 30px 40px;
     border-radius: 30px;
 }
 
@@ -56,12 +56,19 @@
     padding: 20px;
 }
 
+.food-source-name .icon {
+    font-size: 10pt;
+    color: #7f807f;
+    margin-right: 5px;
+}
+
 .food-type {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     font-size: 9pt;
     color: #5F7161;
+    margin-top: 20px;
 }
 
 .food-type-list {
@@ -234,6 +241,12 @@
     background-color: #519259;
 }
 
+.food-nutrition-label {
+    margin-top: 20px;
+    line-height: 1.2em;
+}
+
+
 /*
  * content-aside
  */
@@ -246,12 +259,16 @@
 
 .content-aside h5 {
     font-size: 14pt;
-    color: #CC704B;
+    color: #4e5e50;
 }
 
 .content-aside a {
     text-decoration: none;
     color: #000;
+}
+
+.content-aside .icon-header {
+    color: #BB371A;
 }
 
 .aside-food-item {
@@ -272,11 +289,42 @@
  * similar-food
  */
 
+.food-trivia {
+    width: 100%;
+    max-width: 860px;
+    min-width: 350px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 11pt;
+    
+    color: #000;  
+    background-color: #fff;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.food-trivia p {
+    font-style: italic;
+}
+
+.food-trivia .icon-header {
+    color: #F0BB62;
+}
+
+.food-trivia .aside-food-item:hover {
+    border-left: none;
+    transition: none;
+}
+/*
+ * similar-food
+ */
+
 .similar-food {    
     width: 100%;
     max-width: 860px;
-    min-width: 200px;
+    min-width: 350px;
     margin: 0 auto;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr;
     text-align: left;
@@ -287,8 +335,12 @@
     padding-bottom: 20px;
 }
 
+.similar-food .icon-header {
+    color: #519259;
+}
+
 .similar-food-item-info {
-    font-size: 10pt;
+    font-size: 9pt;
 }
 
 .similar-food-item-info li {
@@ -302,15 +354,13 @@
     border-right: 1px solid #d3d3d3;  
 }
 
-.food-nutrition-label {
-    margin-top: 20px;
-    line-height: 1.2em;
-}
-
-
 /*
  * similar-food-video
 */
+
+.video-aside {
+    margin-bottom: 20px;
+}
 
 .video-similar-food {
     width: 100%;
@@ -337,5 +387,5 @@
 }
 
 .video-food-item-info {
-    font-size: 10pt;
+    font-size: 9pt;
 } 

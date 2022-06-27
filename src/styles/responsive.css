@@ -365,6 +365,20 @@
         margin-right: 80px;
     }
 
+    main .third-main {
+        padding: 50px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 30px;
+        margin: 0;
+    }
+
+    main .third-main .food-type-text {
+        bottom: 0;
+        padding: 100px 30px 0 30px;
+        text-align: left;
+    }
+
     footer .first-footer {
         grid-template-columns: repeat(4, 1fr);
         gap: 32px
@@ -375,7 +389,24 @@
     } 
 }
 
+@media screen and (max-width: 1500px) {
+    main .third-main {
+        max-width: 1050px;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (min-width: 1500px) {
+    main .third-main {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 50px 100px;
+    }
+
+    main .third-main .food-type-text {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
     .foods {
         grid-template-columns: repeat(3, 1fr);
     }

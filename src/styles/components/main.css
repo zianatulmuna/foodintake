@@ -1,4 +1,6 @@
-
+main h1 {
+    font-family: 'Quicksand', sans-serif;
+}
 
 main .first-main {
     display:flex;
@@ -14,6 +16,7 @@ main .first-main .tagline {
 }
 
 main .first-main .tagline h1 {
+    font-weight: 600;
     color: #5F7161;
     font-size: 48px;
     margin-bottom: 24px;
@@ -66,16 +69,25 @@ main .second-main {
     display: flex;
     flex-direction: column;
     padding: 64px;
+    background-image: url('../../public/img/background-tagline-why.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
-main .second-main  .tagline-heading{
+main .second-main  .tagline-heading {
     text-align: center;
     margin: 24px;
+    
 }
 
-main .second-main  .tagline-heading h1{
-    font-size: 32px;
+main .second-main .tagline-heading h1 {
+    font-size: 38px;
     color: #5F7161;
+}
+
+main .second-main .tagline-heading h1 span {
+    color: #CC704B;
 }
 
 main .second-main .tagline-why {
@@ -84,6 +96,7 @@ main .second-main .tagline-why {
     padding: 24px;
     margin: 0 32px;
     justify-content: space-evenly;
+    
 }
 
 main .second-main .tagline-why .img-container {
@@ -111,7 +124,7 @@ main .main-galery{
     background-color: #D0C9C0;
 }
 
-main .main-galery .galery-heading  h1{
+main .main-galery .galery-heading  h1 {
     font-size: 32px;
     color: #6D8B74;
     margin: 24px;
@@ -142,4 +155,49 @@ main .main-galery .galery-grid > img {
 
 .galery-img-5 {
     grid-column: span 2;
+}
+
+main .third-main {
+    padding: 50px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    text-align: center;
+    align-items: center;
+}
+
+main .third-main h1 {
+    font-size: 38px;
+    color: #5F7161;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+main .third-main li {
+    list-style: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    max-width: 500px; 
+    text-align: center;
+    background-color: #D0C9C0;
+}
+
+main .third-main img {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+    padding: 3px 3px 10px 3px;
+}
+
+main .third-main li:hover {
+    background-color:#6D8B74;
+}
+
+main .third-main .food-type-text {
+    margin-top: 30px;
+    font-size: 18px;
 }

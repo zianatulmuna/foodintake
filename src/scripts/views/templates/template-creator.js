@@ -1,3 +1,4 @@
+/* eslint-disable radix */
 import CONFIG from '../../globals/config';
 
 const createFoodItemTemplate = (food) => `
@@ -13,8 +14,8 @@ const createFoodItemTemplate = (food) => `
         <li><i class="fa-brands fa-nutritionix icon"></i></li>
         <li>Calories</li>
         <li>${food.nutrition.nutrients
-            .filter((nutrient) => nutrient.name === 'Calories')
-            .map((nutrient) => `
+    .filter((nutrient) => nutrient.name === 'Calories')
+    .map((nutrient) => `
                 <p>${parseInt(nutrient.amount)}</p>
             `).join('')}
         </li>   
@@ -37,7 +38,9 @@ const createFoodDetailTemplate = (food) => `
   <img class="food-image" src="${food.image}" alt="${food.title}">
 
   <div calss="food-information">    
-    <p class="food-source">from <a href="${food.sourceUrl}">${food.sourceUrl.split('/')[2]}</a></p>
+    <div id="foodSource" class="food-source-name"></div>
+    <p class="food-source">From <a href="${food.sourceUrl}">${food.sourceUrl.split('/')[2]}</a></p>
+
     <div class="food-type">
       ${food.dishTypes.map((name) => `<li class="food-type-list">#${name}</li>`).join('')}
     </div>
@@ -80,15 +83,15 @@ const createFoodDetailTemplate = (food) => `
     </div>
     <div class="food-nutrition-list">
     <table>${food.nutrition.nutrients
-      .map(
-        (nutrient) => `
+    .map(
+      (nutrient) => `
           <tr>
             <td>${nutrient.name}</td>
             <td>${parseInt(nutrient.amount)} ${nutrient.unit}</td>
             <td>${parseInt(nutrient.percentOfDailyNeeds)}%</td>
           </tr>
         `,
-      ).join('')}
+    ).join('')}
     </table>
     </div>
     <div class="food-nutrition-label">
@@ -100,30 +103,28 @@ const createFoodDetailTemplate = (food) => `
   <div class="food-recipe">
     <h4>Ingredients</h4>
     <p>${food.extendedIngredients
-      .map(
-        (ingredient) => `
+    .map(
+      (ingredient) => `
           <p>${ingredient.original}</p>
         `,
-      ).join('')}
+    ).join('')}
     </p>
     <img class="food-ingredient-image" src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
    
-
     <h4>Equipments</h4>
     <img class="food-equipments" src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
 
-
     <h4>Instructions</h4>
     <p>${food.analyzedInstructions
-      .map(
-        (instruction) => `
-          <ol>${instruction.steps
-        .map(
-          (step) => `
-            <li>${step.step}</li>`,
-          ).join('')}</ol>
+    .map(
+      (instruction) => `
+        <ol>${instruction.steps
+    .map(
+      (step) => `
+        <li>${step.step}</li>`,
+    ).join('')}</ol>
         `,
-      ).join('')}
+    ).join('')}
     </p>
   </div>  
 
@@ -148,7 +149,7 @@ const createSimilarFoodItemTemplate = (food) => `
 `;
 
 const createVideoFoodItemTemplate = (video) => `
-  <div class="aside-food-item">
+  <div class="aside-food-item video-aside">
     <a class="video-food-item" href="https://www.youtube.com/watch?v=${video.youTubeId}" terget="_blank">
       <img class="video-food-item-thumbnail" src="${video.thumbnail}" alt="${food.shortTitle}">
       <div class="video-food-item-content">
@@ -163,7 +164,6 @@ const createVideoFoodItemTemplate = (video) => `
     </a>
   </div>
 `;
-
 
 const createBookmarkItemTemplate = (food) => `
 <div class="food-item">
