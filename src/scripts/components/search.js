@@ -84,7 +84,7 @@ class SearchBar extends HTMLElement {
       }
 
       .search__item button {
-        padding: 20px 30px;
+        padding: 21px 30px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
       }

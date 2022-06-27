@@ -198,11 +198,14 @@ filter-menu.open {
     text-decoration: none;
     border: 1px solid #fff;
 }
-  
+
+.pagination button:hover {
+    background-color: #3b8043;
+}
+
 .pagination button.active {
-    background-color: #4CAF50;
+    background-color: #5F7161;
     color: white;
-    border: 1px solid #4CAF50;
 }
 
 .pagination button.disabled {
@@ -210,7 +213,7 @@ filter-menu.open {
     cursor: not-allowed;
   }
 .pagination button:hover:not(.active) {
-    background-color: #fff;
+    background-color: #d3d3d3;
 }
   
 .pagination button:first-child {
