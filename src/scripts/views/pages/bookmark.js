@@ -5,12 +5,13 @@ const Bookmark = {
   async render() {
     return `
     <div class="bookmark-continer">
-      <h1>Bookmarked Food</h1>
-      <div class="food-content">
-      <div id="message" class="food-result-message"></div>
-            <div class="food-content__item">
-            <div id="foods" class="foods">${createSkeletonBookmarkTemplate(8)}</div>
-      </div>
+      <h2><i class="fa-solid fa-bookmark icon-title"></i> Bookmarked Food</h2>
+        <div class="food-content bookmark-content">
+          <div id="message" class="food-result-message"></div>
+          <div class="food-content-item">
+          <div id="foods" class="foods">
+            ${createSkeletonBookmarkTemplate(8)}
+          </div>
         </div>
     </div>
     `;
@@ -19,9 +20,13 @@ const Bookmark = {
   async afterRender() {
     const foods = await FavoriteFoodIdb.getAllFoods();
     const foodsContainer = document.querySelector('#foods');
-    foods.forEach((food) => {
-      foodsContainer.innerHTML += createBookmarkItemTemplate(food);
-    });
+    if (foods == 0) {
+      foodsContainer.innerHTML += '<h2>Your Bookmark is Empty</h2>';
+    } else {
+      foods.forEach((food) => {
+        foodsContainer.innerHTML += createBookmarkItemTemplate(food);
+      });
+    }
   },
 };
 

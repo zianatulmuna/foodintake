@@ -22,28 +22,28 @@ const AboutUs = {
         <img src="/user/ananta.png" alt="Seoarang mahasiswa">
         <h1>Ananta Dwi Prayoga Alwy</h1>
         <h2>UI/UX Designer | Developer</h2>
-        <button><a href="https://www.linkedin.com/in/ananta-alwy/">Connect</a></button>
+        <a href="https://www.linkedin.com/in/ananta-alwy/"><button>Connect</button></a>
       </div>
 
       <div class="card-profile">
         <img src="/user/zian.png" alt="Seoarang mahasiswa">
         <h1>Zianatul Muna</h1>
         <h2>Back-End | Developer</h2>
-        <button><a href="https://www.linkedin.com/">Connect</a></button>
+        <a href="https://www.linkedin.com/in/zianatul-muna"><button>Connect</button></a>
       </div>
       
       <div class="card-profile">
         <img src="/icon/user.png" alt="Seoarang mahasiswa">
         <h1>Muh. Arif</h1>
         <h2>Back-End | Developer</h2>
-        <button><a href="https://www.linkedin.com/">Connect</a></button>
+        <a href="https://www.linkedin.com/in/muh-arif-1254b619b"><button>Connect</button></a>
       </div>
 
       <div class="card-profile">
         <img src="/user/uccank.png" alt="Seoarang mahasiswa">
         <h1>Andi Muh. Yusran</h1>
         <h2>Front-End | Developer</h2>
-        <button><a href="https://www.linkedin.com/in/andi-yusran/">Connect</a></button>
+        <a href="https://www.linkedin.com/in/andi-yusran/"><button>Connect</button></a>
       </div>
     </div>
   </section>

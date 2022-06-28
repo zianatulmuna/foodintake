@@ -1,38 +1,37 @@
 class FilterMenu extends HTMLElement {
-    constructor() {
-      super();
-      this.shadowDOM = this.attachShadow({ mode: 'open' });
-    }
-  
-    connectedCallback() {
-      this.render();
-    }
-  
-    set clickEvent(event) {
-      this._clickEvent = event;
-      this.render();
-    }
-  
-    get value() {
-      const filterValue = {
-        minCal: this.shadowDOM.querySelector('#min-Nutrient').value,
-        maxCal: this.shadowDOM.querySelector('#max-Nutrient').value,
-        minCarbs: this.shadowDOM.querySelector('#min-Carbs').value,
-        maxCarbs: this.shadowDOM.querySelector('#max-Carbs').value,
-        minProtein: this.shadowDOM.querySelector('#min-Protein').value,
-        maxProtein: this.shadowDOM.querySelector('#max-Protein').value,
-        minFat: this.shadowDOM.querySelector('#min-Fat').value,
-        maxFat: this.shadowDOM.querySelector('#max-Fat').value,
-        dietCheck: this.shadowDOM.querySelectorAll('[name~=diet]'),
-        allergieCheck: this.shadowDOM.querySelectorAll('[name~=allergie]'),
-        closeButton: this.shadowDOM.querySelector('.close'),
-  
-      };
-      return filterValue;
-    }
-  
-    render() {
-      this.shadowDOM.innerHTML = `
+  constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  set clickEvent(event) {
+    this._clickEvent = event;
+    this.render();
+  }
+
+  get value() {
+    const filterValue = {
+      minCal: this.shadowDOM.querySelector('#min-Nutrient').value,
+      maxCal: this.shadowDOM.querySelector('#max-Nutrient').value,
+      minCarbs: this.shadowDOM.querySelector('#min-Carbs').value,
+      maxCarbs: this.shadowDOM.querySelector('#max-Carbs').value,
+      minProtein: this.shadowDOM.querySelector('#min-Protein').value,
+      maxProtein: this.shadowDOM.querySelector('#max-Protein').value,
+      minFat: this.shadowDOM.querySelector('#min-Fat').value,
+      maxFat: this.shadowDOM.querySelector('#max-Fat').value,
+      dietCheck: this.shadowDOM.querySelectorAll('[name~=diet]'),
+      allergieCheck: this.shadowDOM.querySelectorAll('[name~=allergie]'),
+      closeButton: this.shadowDOM.querySelector('.close'),
+    };
+    return filterValue;
+  }
+
+  render() {
+    this.shadowDOM.innerHTML = `
             <style>
             .filter-box {
                 display: flex;
@@ -184,6 +183,16 @@ class FilterMenu extends HTMLElement {
                 text-decoration: none;
                 cursor: pointer;
               }
+
+            @media screen and (max-width: 550px) {
+                .filter-box {
+                    background-color: #fff;
+                }
+
+                .filter-list .nutrient-filter div input {
+                    border: 1px solid #d3d3d3;
+                }
+            }
 
             @media screen and (max-width: 650px) {
                 .filter-box {
@@ -362,9 +371,8 @@ class FilterMenu extends HTMLElement {
                 <button id="filterButton" class="button-filter" type="submit">Search by Filter</button>
             </div>
             `;
-      this.shadowDOM.querySelector('.button-filter').addEventListener('click', this._clickEvent);
-    }
+    this.shadowDOM.querySelector('#filterButton').addEventListener('click', this._clickEvent);
+  }
 }
-  
+
 customElements.define('filter-menu', FilterMenu);
-  

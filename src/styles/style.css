@@ -2,7 +2,7 @@
 @import url('./components/main.css');
 @import url('./components/about.css');
 @import url('./components/foodish.css');
-@import url('./components/bookmark.css');
+@import url('./components/detail.css');
 
 * {
     padding: 0;
@@ -40,7 +40,6 @@ body {
 
 .app-bar__brand img {
     width: 36px;
-    height: auto;
     margin-right: 16px;
 }
 
@@ -75,7 +74,7 @@ body {
 
 .app-bar .app-bar__navigation {
     position: absolute;
-    top: 50px;
+    top: 56px;
     left: -240px;
     width: 240px;
     transition: all 0.3s;
@@ -107,9 +106,13 @@ ul {
     color: #6D8B74;
 }
 
+/*
+  Main Content
+*/
+
 main {
     flex: 1;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 .content {
@@ -128,6 +131,6 @@ main {
 
 @keyframes  anmBg {
     to {
-        background-position: -170% 0;
+        background-position: -200% 0;
     }
 }

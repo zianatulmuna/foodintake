@@ -24,6 +24,12 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
   plugins: [
@@ -64,14 +70,14 @@ module.exports = {
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
 };
