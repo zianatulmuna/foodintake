@@ -23,7 +23,11 @@ Nama Anggota Kelompok :
 
 ## User-accessible Link
 
-https://foodintake.vercel.app/ 
+https://foodintake.vercel.app/
+
+## User Manual Guide
+
+
 
 ## Github Repo Link
 
@@ -44,19 +48,35 @@ https://github.com/zianatulmuna/foodintake
 <p>Berdasarkan permasalahan tersebut, dibutuhkan sistem informasi yang dapat diakses dan digunakan dengan mudah mengenai detail kandungan nutrisi dari suatu makanan, dan memberikan fitur untuk merencanakan asupan makanan perhari atau perminggu. Untuk itu, dikembangkan solusi berupa Aplikasi Website “FoodIntake” untuk memberikan informasi mengenai resep dan detail kandungan bahan dan produk makanan untuk membantu mengatur dan memenuhi kebutuhan nutrisi.</p>
 <p>Website FoodIntake dibuat dengan memanfaatkan API dari Spoonacular dalam mendapatkan list data menu makanan. FoodIntake juga dibangun berdasarkan pembelajaran yang ada pada kelas expert dicoding.</p>
 
-##  Risk and Issue Management Plan: 
+# Project Resource
+
+Berikut Resources yang dibutuhkan dalam pengembangan Website FoodIntake :
+
+
+#  Risk and Issue Management Plan: 
 
 Berikut merupakan beberapa faktor yang dapat menggagalkan atau menunda pembuatan proyek website yang akan dibangun dan perencanaan bagaimana mengidentifikasi serta menyelesaikan isu yang mungkin terjadi selama pengerjaan proyek. 
 
 Kondisi  | Penyebab |Dampak  | Strategi Mitigasi
 ------------- | ------------- |------------- | -------------
-Ide Aplikasi Ditolak  | Kurang jelas dan kurang berorientasi pada penyelesaian suatu masalah.| Hal-hal yang telah dipersiapkan sebelumnya perlu untuk diperbaharui.  | Memastikan ide yang diambil harus jelas dan direncanakan dengan baik.
-Adanya beberapa hambatan selama penerapan/ stuck  | Hal ini terjadi karena kurangnya proses eksplorasi informasi. | Terdapat tahap-tahapan berikutnya yang tidak bisa diproses sebelum masalah terselesaikan.  | Menghubungi tutor/mentor untuk mendapatkan bimbingan dan arahan.
+Ide Aplikasi Ditolak  | Kurang jelas dan kurang berorientasi pada penyelesaian suatu masalah yang ada pada masyarakat.| Hal-hal yang telah dipersiapkan sebelumnya perlu untuk diperbaharui atau diulang.  | Memastikan ide yang diambil harus jelas dan direncanakan dengan matang.
+Kerusakan atau malfungsi Hardware  | Perangkat yang digunakan seperti laptop mengalami lag, bootloop, dsb. | Tidak dapat mengerjakan proyek dengan baik.  | Melakukan pemeliharaan terhadap perangkat keras dan memperhatikan berbagai sumber daya yang diperlukan.
+Koneksi internet yang bermasalah  | Jaringan internet provider mengalami masalah seperti putus dan sebagainya.  | Sulit berkomunikasi antar sesama anggota dan keterlambatan mengerjakan proyek.  | Selalu bersiaga dan mencari alternatif koneksi internet yang lain.
 Bencana Alam  | Adanya faktor dari alam yang tidak dapat diprediksi waktu terjadinya. | Akan mengurangi fokus dalam proses pengerjaan. | Selalu berprogres setiap harinya.
-Sakit  | Developer kurang menjaga kesehatan selama masa pembuatan website | Beberapa pekerjaan mungkin akan tertunda sehingga melebihi timeline yang sudah ditentukan.  | Selalu memperhatikan kesehatan dan istirahat secukupnya agar bisa mengerjakan secara maksimal.
-Adanya penundaan  | Mungkin ini akan bergantung pada keterampilan pribadi | Target dan rencana proyek yang tidak sesuai.  | Bagikan kemajuan secara teratur dan saling membantu untuk menyelesaikan proyek. 
-Source Code hilang  | Server Github mungkin down dan adanya kesalahan teknis. | Timeline yang sudah ditentukan tidak dapat terlaksana dengan baik.  |Selalu sinkronkan proyek ke penyimpanan repositori.
-Perangkat keras malfungsi dan jaringan yang kurang mendukung.  | Adanya kondisi seperti laptop lagging, web error, jaringan atau koneksi internet yang bermasalah. | Tidak dapat bekerja dengan baik pada proyek.| Wajib melakukan pemeliharaan terhadap perangkat keras dan memperhatikan berbagai sumber daya yang diperlukan.
-Data Source  | Kurangnya informasi Data | Menghambat implementasi website  | Mencari data open source
-financial  | Membutuhkan uang untuk deployment website | Tidak dapat mendeploy/hosting website  | Mencari sebuah layanan hosting gratis
-Ujian  | Terdapat ujian dari kampus | Menghambat implementasi website  | Mempersiapkan Materi Kuliah
+Sakit  | Peserta tidak menjaga kesehatannya dengan baik.  | Beberapa pekerjaan mungkin akan terhambat dan akan membebani anggota tim lain.  |Selalu menjaga kesehatan dengan istirahat yang cukup.
+Mengalami hambatan selama proses pembuatan website.  | Hal ini terjadi karena kurangnya proses eksplorasi informasi.  | Terdapat tahap-tahapan berikutnya yang tidak bisa diproses sebelum masalah terselesaikan.  | Berkonsultasi kepada tutor/mentor untuk mendapatkan bimbingan dan arahan.
+Human Error  | Adanya kesalahan informasi antar sesama anggota tim.  | Proyek dibuat akan mengalami masalah dan tidak selesai sesuai timeline.  | Tetap saling berkomunikasi satu sama lain, dan menyampaikan informasi secara ringkas dan jelas.
+Perubahan Agenda.  | Adanya agenda yang tidak terduga di luar agenda projek yang telah dibuat.  | Keterlambatan pengerjaan proyek, timeline proyek yang dibuat terganggu.  | Segera mengabari anggota tim agar segera diatasi dan mendiskusikan perubahan jadwal sesegera mungkin.
+Dana  | Membutuhkan dana untuk deployment atau tools yang digunakan pada website yang dibuat.  | Website tidak dapat berjalan sesuai harapan.  | Mencari sebuah layanan hosting dan tools gratis yang tersedia.
+Ujian  | Adanya ujian dari kampus  | Menghambat pembuatan website  | Mempersiapkan Materi Kuliah
+
+
+
+
+
+
+
+
+
+
+
