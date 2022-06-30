@@ -25,6 +25,17 @@
         margin-bottom: 50px;
     }
 
+<<<<<<< HEAD
+    main .fourth-main img {        
+        max-width: 600px; 
+    }
+
+    main .fourth-main {
+        flex-direction: column;
+    }
+
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     .about-foodintake {
         display: flex;
         flex-direction: column;
@@ -163,6 +174,18 @@
 }
 
 @media screen and (max-width: 800px) {
+<<<<<<< HEAD
+    main .fifth-main {
+        padding: 50px 30px;
+    }
+
+    main .fifth-main img {
+        margin: 20px;
+        max-height: 400px; 
+    }
+
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     .food {
         margin: 0 auto;
     }
@@ -211,7 +234,16 @@
         margin-bottom: 24px;
     }
 
+<<<<<<< HEAD
+    main .second-main .tagline-heading h1, 
+    main .third-main .tagline-heading h1, 
+    main .fourth-main .tagline-heading h1,  
+    main .fifth-main .tagline-heading h1, 
+    main .fifth-main .tagline-heading h1
+    main .main-galery {
+=======
     main .second-main .tagline-heading h1, main .third-main .tagline-heading h1, main .main-galery {
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
         font-size: 20pt;
     }
 
@@ -224,6 +256,13 @@
         text-align: left;
     }
 
+<<<<<<< HEAD
+    main .tagline-heading p {
+        font-size: 11pt;
+    }
+
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     main .second-main, main .third-main  {
         padding: 40px 30px;
     }
@@ -234,6 +273,13 @@
         flex-direction: column;
     }
 
+<<<<<<< HEAD
+    main .fifth-main {
+        flex-direction: column;
+    }
+
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     main .main-galery {
         padding: 0;
     }
@@ -243,12 +289,40 @@
         margin-bottom: 40px;
     }
 
+<<<<<<< HEAD
+    .about-foodintake {
+        text-align: left;
+        width: 100%;
+    }
+
+    .about-foodintake div {
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .foodintake-logo {
+        text-align: center;
+        width: 80px;
+    }
+
+    .foodintake-logo img {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     .about-team {
         padding: 32px;
     }
 
     .team-description {
         text-align: left;
+<<<<<<< HEAD
+        padding: 0;
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     }
 
     footer .first-footer {
@@ -272,6 +346,10 @@
     .aside-food-item li {
         font-size: 9pt;
     }
+<<<<<<< HEAD
+    
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
 }
 
 @media screen and (max-width: 550px) {
@@ -298,17 +376,28 @@
     .app-bar__brand img {
         width: 28px;
         margin-right: 7px;
+<<<<<<< HEAD
+=======
     }
 
     .foodish-continer {
         gap: 0
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
     }
         
 
+    .foodish-continer {
+        gap: 0
+    }       
+
     .content {
         margin: 10px 0;
+<<<<<<< HEAD
+    }    
+=======
     }
     
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
 
     .detail-page, .content-aside {
         background-color: #f1f1f1;

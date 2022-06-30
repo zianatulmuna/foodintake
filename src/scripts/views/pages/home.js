@@ -101,7 +101,38 @@ const Home = {
         </a>
       </li>
      </div>
+<<<<<<< HEAD
   </section>
+
+  <section class="fourth-main">
+    <div class="tagline-heading">
+      <h1>Personalisasikan Dengan <span>Filter Nutrisi</span></h1>
+      <p>Pastikan kamu memilih makanan sesuai dengan kebutuhan nutrisi ya!</p>
+    </div>
+    <picture>
+                <source media="(max-width: 650px)" srcset="./img/information-small.jpg"/>
+                <img 
+                    src='./img/information-large.jpg' 
+                    alt="Food Information"></img>
+    </picture>    
+=======
+>>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
+  </section>
+
+  <section class="fifth-main">
+    <div class="tagline-heading">
+      <h1>Periksa <span>Label Nutrisi</span></h1>
+      <p>Mungkin sedikit menakutkan untuk mengetahui berapa banyak kalori atau berapa banyak gula dalam makanan favoritmu, 
+      tetapi pastikan kamu memeriksa <span>Label Nutrisi</span> sebelum membuat makanan yang kamu suka.</p>
+    </div>
+    <picture>
+                <source media="(max-width: 650px)" srcset="./img/nutrition-label-small.jpg"/>
+                <img 
+                    src='./img/nutrition-label-large.jpg' 
+                    alt="Lutrition Label"></img>
+    </picture>    
+  </section>
+
 
   <section class="main-galery">
     <div class="galery-heading">
