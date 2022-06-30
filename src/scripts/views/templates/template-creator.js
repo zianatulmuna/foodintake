@@ -7,8 +7,8 @@ const createFoodItemTemplate = (food) => `
     <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
     <div class="food-item-info">
       <ul>
-          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
-          <li class="food-item-info-text">Health</li>
+          <li><i class="fa-solid fa-star icon"></i>${food.healthScore}%</li>
+          <li class="food-item-info-text">Healthy</li>
       </ul>
       <ul class="food-item-info-mid">
         <li><i class="fa-brands fa-nutritionix icon"></i> 
@@ -47,8 +47,8 @@ const createFoodDetailTemplate = (food) => `
     <h4>Food Facts</h4>
     <div class="food-fact-item">
     <div>
-      <li class="food-fact-value">${food.healthScore}</li>
-      <li class="food-fact-title"><i class="fas fa-star-half-alt icon"></i> Health Score</li>
+      <li class="food-fact-value">${food.healthScore}%</li>
+      <li class="food-fact-title"><i class="fa-solid fa-star icon"></i> Health Score</li>
     </div>
     <div>
       <li class="food-fact-value">${food.weightWatcherSmartPoints}</li>
@@ -91,7 +91,7 @@ const createFoodDetailTemplate = (food) => `
     </table>
     </div>
     <div class="food-nutrition-label">
-      <img src="${CONFIG.BASE_URL}recipes/${food.id}/nutritionLabel.png?${CONFIG.API_KEY}" alt="Nutrition Label">
+      <img class="lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/nutritionLabel.png?${CONFIG.API_KEY}" alt="Nutrition Label">
     </div>
     
   </div>
@@ -105,10 +105,10 @@ const createFoodDetailTemplate = (food) => `
         `,
     ).join('')}
     </p>
-    <img class="food-ingredient-image" src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
-   
+    <img class="food-ingredient-image lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
+     
     <h4>Equipments</h4>
-    <img class="food-equipments" src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
+    <img class="food-equipments lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
 
     <h4>Instructions</h4>
     <p>${food.analyzedInstructions
@@ -147,8 +147,8 @@ const createSimilarFoodItemTemplate = (food) => `
 const createVideoFoodItemTemplate = (video) => `
   <div class="aside-food-item video-aside">
     <a class="video-food-item" href="https://www.youtube.com/watch?v=${video.youTubeId}" terget="_blank">
-      <img class="video-food-item-thumbnail" src="${video.thumbnail}" alt="${food.shortTitle}">
-      <div class="video-food-item-content">
+    <img class="video-food-item-thumbnail lazyload" data-src="${video.thumbnail}" alt="${food.shortTitle}">
+    <div class="video-food-item-content">
         <h5 class="video-food-item-title">${video.shortTitle}</h5>
         <div class="video-food-item-info">
           <ul class="video-food-item-info-icon">
@@ -167,7 +167,7 @@ const createBookmarkItemTemplate = (food) => `
     <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
     <div class="food-item-info">
       <ul>
-          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
+          <li><i class="fa-solid fa-star icon"></i> ${food.healthScore}%</li>
           <li class="food-item-info-text">Health</li>
       </ul>
       <ul>
@@ -196,30 +196,27 @@ const createSkeletonItemTemplate = (count) => {
 
   for (let i = 0; i < count; i++) {
     template += `
-      <div class="food-item">
-        <div class="food-item-image skeleton">Skeleton</div>
-        <div class="food-item-info">
-          <ul class="food-item-info-icon">
-              <li class="skeleton">Logo</li>
-              <li class="skeleton">Score</li>
-              <li class="skeleton">5.0</li>           
-          </ul>
-          <ul class="food-item-info-mid">
-            <li class="skeleton">Logo</li>
-            <li class="skeleton">Calories</li>
-            <li class="skeleton">69</li>   
-          </ul>
-          <ul>
-            <li class="skeleton">Logo</i></li>
-            <li class="skeleton">Serving</li>
-            <li class="skeleton">8</li>
-          </ul>
-        </div>
-        <div class="food-item-content">
-          <h5 class="skeleton">How to make a healthy food.</h5>
-          <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
-        </div>
+    <div class="food-item">
+    <img class="food-item-image skeleton lazyload" data-src="./etc/placeholder.png" alt="skeleton">  
+      <div class="food-item-info">
+        <ul class="skeleton">
+          <li>80%</li>
+          <li class="food-item-info-text">Health</li>
+        </ul>
+        <ul class="food-item-info-mid skeleton">
+          <li>
+            <i>80</i> 
+          </li>
+          <li class="food-item-info-text">Calories</li> 
+        </ul>
+        <ul class="skeleton">
+          <li><i></i>80</li>
+          <li class="food-item-info-text">Servings</li>
+        </ul>
       </div>
+        <h5 class="skeleton">Lorem ipsum dolor sit.</h5>
+        <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur.</p>
+    </div>
     `;
   }
 
@@ -263,10 +260,10 @@ const createSkeletonDetailTemplate = (count) => {
 };
 
 const createSkeletonBookmarkTemplate = (count) => {
-  const template = '';
+  let template = '';
 
   for (let i = 0; i < count; i++) {
-    `
+    template += `
     <div class="food-item">
       <img class="food-item-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">   
     <div class="bookmark-item-info">

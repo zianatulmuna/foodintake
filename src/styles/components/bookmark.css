@@ -1,0 +1,43 @@
+.bookmark-item-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    font-size: 10pt;
+    padding: 16px;
+}
+
+.bookmark-item-info ul {
+    height: 60px;
+}
+
+.bookmark-item-info-icon {
+    border-right: 1px solid #EFEAD8;
+}
+
+.bookmark-item-info .icon {
+    color: #9FC088;
+}
+
+.bookmark-item-content {
+    padding: 0 18px;
+    margin-bottom: 18px;
+}
+
+.bookmark-item-title a {
+    color: #CC704B;
+    text-decoration: none;
+}
+
+.bookmark-item-title a:hover {
+    color: #be603b;
+}
+
+.bookmark-item-summary {
+    color: #000;
+    font-size: 10pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

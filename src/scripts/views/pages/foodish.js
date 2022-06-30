@@ -3,7 +3,6 @@ import { createFoodItemTemplate, createSkeletonItemTemplate } from '../templates
 import DrawerInitiator from '../../utils/drawer-initiator';
 import '../../components/filter';
 import '../../components/search';
-import PageInitiator from '../../utils/pagination-initiator';
 
 const Foodish = {
   async render() {
@@ -12,7 +11,7 @@ const Foodish = {
       <search-bar></search-bar>
       <div class="show-filter">
         <button id="showFilterButton">Search by <span>Filter <i class="fa-solid fa-caret-down"></i></span></button>
-      </div>
+      </div>      
       <div id="message" class="food-result-message"></div>
       <filter-menu></filter-menu>
       <div class="food-content">      
@@ -22,11 +21,7 @@ const Foodish = {
           </div>
         </div>
         <div class="food-content-page">
-          <div class="pagination">
-            <button id="buttonPage1">1</button>
-            <button id="buttonPage2">2</button>
-            <button id="buttonPage3">3</button>
-          </div>
+          <div class="pagination"></div>
         </div>
     </div>
       `;
@@ -36,18 +31,14 @@ const Foodish = {
     const searchElement = document.querySelector('search-bar');
     const filterElement = document.querySelector('filter-menu');
     const foodContainer = document.querySelector('#foods');
-    const pageContainer = document.querySelector('.food-content-page');
     const resultHeading = document.querySelector('#message');
-
-    const page1 = document.querySelector('#buttonPage1');
-    const page2 = document.querySelector('#buttonPage2');
-    const page3 = document.querySelector('#buttonPage3');
+    const paginationContainer = document.querySelector('.pagination');
 
     const getPopularFoods = async (offset) => {
       try {
-        const result = await await SpoonacularSource.popularFoods(offset);
+        const result = await SpoonacularSource.popularFoods(offset);
         foodResultMessage('Most Popular Foods');
-        renderResult(result);
+        renderFoodResult(result);
       } catch (message) {
         fallbackResult(message);
       }
@@ -55,13 +46,11 @@ const Foodish = {
 
     const getFilteredFoods = async (filterLine) => {
       try {
-        const foods = await SpoonacularSource.searchFoodbyFilter(filterLine);
+        const foods = await SpoonacularSource.getAllFood(filterLine);
         if (foods.length) {
-          renderResult(foods);
-          foodResultMessage('Results for Food Filter');
+          renderFoodResult(foods);
           foodContainer.classList.remove('hide-style');
         } else {
-          foodResultMessage();
           foodContainer.classList.add('hide-style');
         }
       } catch (error) {
@@ -69,29 +58,35 @@ const Foodish = {
       }
     };
 
-    const renderResult = (results) => {
-      foodContainer.innerHTML = '';
-      results.forEach((food) => {
-        foodContainer.innerHTML += createFoodItemTemplate(food);
-      });
+    const setFilteredFoods = async (filterLine, message) => {
+      let offset = 0;
+      const offsetArray = [];
+      const cekResults = await SpoonacularSource.getTotalFood(filterLine);
+
+      getFilteredFoods(filterLine);
+
+      if (cekResults) {
+        foodResultMessage(`${cekResults} ${message}`);
+        const pages = setPagination(cekResults);
+
+        for (let i = 0; i < pages.length; i++) {
+          offsetArray.push(offset);
+          offset += 24;
+        }
+
+        for (let i = 0; i < pages.length; i++) {
+          pages[i].addEventListener('click', () => {
+            offset += 30;
+            getFilteredFoods(`${filterLine}offset=${offsetArray[i]}&`);
+          });
+        }
+      } else {
+        foodResultMessage();
+        clearPaginationBefore();
+      }
     };
 
-    const foodResultMessage = (message = 'No Result, Please try another filter') => {
-      resultHeading.innerHTML = `<h4>${message}</h4>`;
-    };
-
-    const onButtonSearchClicked = async () => {
-      pageContainer.classList.add('hide-style');
-
-      const result = await SpoonacularSource.searchFood(searchElement.value);
-      const capitalizedText = searchElement.value.charAt(0).toUpperCase() + searchElement.value.slice(1);
-      foodResultMessage(`Results for ${capitalizedText}`);
-      renderResult(result);
-    };
-
-    const onButtonFilterSearchClicked = async () => {
-      pageContainer.classList.add('hide-style');
-
+    const setFilterSearchList = () => {
       /* get diet list checkbox from user */
       const dietCheckbox = filterElement.value.dietCheck;
       let dietList = '';
@@ -118,6 +113,7 @@ const Foodish = {
       const filterArray = [];
 
       if (searchElement.value.length > 0) filterArray.push(`query=${searchElement.value}`);
+      if (filterElement.value.typeSelect.length > 0) filterArray.push(`type=${filterElement.value.typeSelect}`);
       if (filterElement.value.minCal.length > 0) filterArray.push(`minCalories=${filterElement.value.minCal}`);
       if (filterElement.value.maxCal.length > 0) filterArray.push(`maxCalories=${filterElement.value.maxCal}`);
       if (filterElement.value.minCarbs.length > 0) filterArray.push(`minCarbs=${filterElement.value.minCarbs}`);
@@ -129,46 +125,101 @@ const Foodish = {
       if (dietCount > 0) filterArray.push(`diet=${dietList}`);
       if (allergieCount > 0) filterArray.push(`intolerances=${allergieList}`);
 
-      if (filterArray.length > 0) {
-        let filterLine = '&';
+      let filterLine = '';
 
+      if (filterArray.length > 0) {
         /* make a sentence of all filter list */
         for (let i = 0; i < filterArray.length; i++) {
           filterLine += `${filterArray[i]}&`;
         }
+      }
 
-        /* get filter foods list */
-        getFilteredFoods(filterLine);
-      } else {
-        foodResultMessage();
-        foodContainer.classList.add('hide-style');
+      return filterLine;
+    };
+
+    const setPagination = (cekResults) => {
+      clearPaginationBefore();
+      let totalPage = Math.ceil(cekResults / 24);
+
+      if (totalPage > 7) totalPage = 7;
+
+      for (let i = 1; i <= totalPage; i++) {
+        paginationContainer.innerHTML += `<button id="buttonPage${i}" class="pagination-button">${i}</button>`;
+      }
+
+      const pages = paginationContainer.getElementsByClassName('pagination-button');
+      pages[0].classList.add('active');
+
+      return pages;
+    };
+
+    const clearPaginationBefore = () => {
+      while (paginationContainer.hasChildNodes()) {
+        paginationContainer.removeChild(paginationContainer.firstChild);
       }
     };
 
-    const onFoodishPageRender = () => {
-      pageContainer.classList.remove('hide-style');
+    const renderFoodResult = (results) => {
+      const pages = paginationContainer.querySelectorAll('.pagination-button');
+      foodContainer.innerHTML = createSkeletonItemTemplate(30);
 
+      for (let i = 0; i < pages.length; i++) {
+        pages[i].addEventListener('click', () => {
+          const current = document.getElementsByClassName('active');
+          current[0].className = current[0].className.replace(' active', '');
+          pages[i].className += ' active';
+        });
+      }
+
+      foodContainer.innerHTML = '';
+      results.forEach((food) => {
+        foodContainer.innerHTML += createFoodItemTemplate(food);
+      });
+    };
+
+    const foodResultMessage = (message = 'No Result, Please try another filter') => {
+      resultHeading.innerHTML = `<h4>${message}</h4>`;
+    };
+
+    const onButtonSearchClicked = async () => {
+      const filterLine = `query=${searchElement.value}&`;
+      const message = `Results for ${searchElement.value.charAt(0).toUpperCase()}${searchElement.value.slice(1)}`;
+      setFilteredFoods(filterLine, message);
+    };
+
+    const onButtonFilterSearchClicked = async () => {
+      const emptyMessage = filterElement.value.messageCon;
+      const filterLine = setFilterSearchList();
+
+      if (filterLine) {
+        /* get filter foods list */
+        const message = 'Results for Filtered Food';
+        setFilteredFoods(filterLine, message);
+
+        emptyMessage.classList.remove('show-style');
+      } else {
+        emptyMessage.classList.add('show-style');
+      }
+    };
+
+    const onFoodishPageRender = async () => {
       let offset = 0;
+      const offsetArray = [];
+      const cekResults = await SpoonacularSource.getTotalFood('offset=0&');
       getPopularFoods(offset);
-      PageInitiator.activePage1(page1, page2, page3);
 
-      page1.addEventListener('click', () => {
-        PageInitiator.activePage1(page1, page2, page3);
-        offset = 0;
-        getPopularFoods(offset);
-      });
+      const pages = setPagination(cekResults);
 
-      page2.addEventListener('click', () => {
-        PageInitiator.activePage2(page1, page2, page3);
-        offset = 12;
-        getPopularFoods(offset);
-      });
+      for (let i = 0; i < pages.length; i++) {
+        offsetArray.push(offset);
+        offset += 24;
+      }
 
-      page3.addEventListener('click', () => {
-        PageInitiator.activePage3(page1, page2, page3);
-        offset = 24;
-        getPopularFoods(offset);
-      });
+      for (let i = 0; i < pages.length; i++) {
+        pages[i].addEventListener('click', () => {
+          getPopularFoods(offsetArray[i]);
+        });
+      }
     };
 
     onFoodishPageRender();

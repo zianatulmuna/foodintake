@@ -4,7 +4,7 @@
     margin: auto 56px;
 }
 
-search-bar, .food-result-message, .show-filter {
+search-bar, .food-result-message, .show-filter, .filter-type {
     grid-column-start: 1;
     grid-column-end: 5;
 }
@@ -34,7 +34,8 @@ filter-menu.open {
     border: none;
     align-items: center;
     background-color: white;
-   
+    min-height: 44px;
+    min-width: 44px;
  }
 
  .show-filter button:hover {
@@ -112,7 +113,9 @@ filter-menu.open {
 
 .food-item-title a {
     color: #000;
-    font-size: 14pt;
+    font-size: 15pt;
+    min-height: 44px;
+    min-width: 44px;
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -137,10 +140,10 @@ filter-menu.open {
 }
 
 .food-result-message {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Comfortaa', cursive;
     text-align: center;
     color: #000;
-    margin-bottom: 30px;
+    padding: 30px;
 } 
 
 /*
@@ -151,9 +154,22 @@ filter-menu.open {
 }
 
 .bookmark-continer h2 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
+    margin-bottom: 30px;
 }
 
+.bookmark-continer h4 {
+    font-size: 12pt;
+    padding: 10px 15px;
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 30px;
+    max-width: 500px;
+    margin-bottom: 300px;
+}
 .bookmark-continer .food-item-info {
     grid-template-columns: repeat(2, 1fr);
 }
@@ -176,6 +192,8 @@ filter-menu.open {
     display: none;
 }
 
+
+
 /*
  * pagination
  */
@@ -194,7 +212,7 @@ filter-menu.open {
 .pagination button {
     color: black;
     float: left;
-    padding: 8px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     border: 1px solid #fff;
 }

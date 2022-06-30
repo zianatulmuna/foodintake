@@ -1,5 +1,5 @@
 main h1 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Comfortaa', 'Poppins', sans-serif, cursive;
 }
 
 main .first-main {
@@ -69,7 +69,7 @@ main .second-main {
     display: flex;
     flex-direction: column;
     padding: 64px;
-    background-image: url('../../public/img/background-tagline-why.png');
+    background-image: url('../../public/img/background-tagline-why-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -158,46 +158,53 @@ main .main-galery .galery-grid > img {
 }
 
 main .third-main {
-    padding: 50px;
-    background-color: #fff;
+    padding: 50px 80px;
     display: flex;
-    flex-direction: column;
-    margin: 0px auto;
+    background-color: #fff;
     text-align: center;
     align-items: center;
 }
 
-main .third-main h1 {
+main .third-main .tagline-heading {
+    text-align: left;
+    margin-right: 50px;
+}
+
+main .third-main .tagline-heading h1 {
     font-size: 38px;
     color: #5F7161;
     margin-bottom: 30px;
-    padding: 20px 30px;
+    
 }
 
-main .third-main li {
+main .third-main .tagline-heading h1 span {
+    color: #CC704B;
+}
+
+main .third-main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+main .third-main-grid li {
     list-style: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     margin: 0px auto;
-    margin-bottom: 20px;
-    max-width: 500px; 
+    max-width: 400px; 
     text-align: center;
-    background-color: #D0C9C0;
 }
 
-main .third-main img {
+main .third-main-grid img {
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
-    padding: 3px 3px 10px 3px;
 }
 
 main .third-main li:hover {
     background-color:#6D8B74;
 }
 
-main .third-main .food-type-text {
-    margin-top: 30px;
-    font-size: 18px;
-}

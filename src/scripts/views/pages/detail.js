@@ -22,11 +22,11 @@ const Detail = {
                 <div id="foodTrivia" class="aside-food-item"></div>
               </div>
               <div class="similar-food">
-                <h4><i class="fa-solid fa-kitchen-set icon-header"></i> Similar Foods</h4>
+                <h4><i class="fa-solid fa-kitchen-set icon-header"></i> Related Foods</h4>
                 <div id="similarFood"></div>
               </div>
               <div class="video-similar-food">
-                <h4><i class="fa-brands fa-youtube icon-header"></i> Similar Food Videos</h4>
+                <h4><i class="fa-brands fa-youtube icon-header"></i> Related Videos</h4>
                 <div id="videoFood" class="video-similar-food"></div>
               </div>              
             </div>

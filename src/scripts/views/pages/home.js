@@ -10,7 +10,12 @@ const Home = {
       <button onclick="window.location.href='#/foodish'">Menu</button>
     </div>
     <div class="tagline-img">
-      <img src="/img/food-1.png">
+      <picture>
+                <source media="(max-width: 650px)" srcset="./img/food-1-small.jpg"/>
+                <img 
+                    src='./img/food-1-large.jpg' 
+                    alt="Semangkok Makanan"></img>
+            </picture>
     </div>
   </section>
 
@@ -20,7 +25,12 @@ const Home = {
     </div>
     <div class="tagline-why">
       <div class="img-container">
-        <img src="/img/food-2.png">
+        <picture>
+                <source media="(max-width: 650px)" srcset="./img/food-2-small.jpg"/>
+                <img 
+                    src='./img/food-2-large.jpg' 
+                    alt="Semangkok Makanan"></img>
+            </picture>
       </div>
       <p>Gizi yang optimal sangat penting untuk pertumbuhan normal serta perkembangan fisik dan kecerdasan bayi, anak-anak, serta seluruh kelompok umur. Gizi baik membuat berat badan normal atau sehat, tubuh tidak mudah terkena penyakit infeksi, produktivitas kerja meningkat serta terlindung dari penyakit kronis dan kematian dini akibat penyakit.
         <br><br>
@@ -28,20 +38,69 @@ const Home = {
       </p>
     </div>
   </section>
-  
+
   <section class="third-main">
-    <div class="tagline-heading">
-      <h1>Rekomendasi Berdasarkan Tipe Makanan</h1>
-    </div>
-      <li><a href="#/foodish"><img src="/img/food type/1.png"></a></li>
-      <li><a href="#/foodish"><img src="/img/food type/2.png"></a></li>
-      <li><a href="#/foodisht"><img src="/img/food type/3.png"></a></li>
-      <li><a href="#/foodish"><img src="/img/food type/4.png"></a></li>
-      <li><a href="#/foodish"><img src="/img/food type/5.png"></a></li>
-      <li><a href="#/foodish"><img src="/img/food type/6.png"></a></li>
-      <div class="food-type-text">
-        <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
-      </p>
+  <div class="tagline-heading">
+    <h1>Rekomendasi Berdasarkan<br><span>Tipe Makanan</span></h1>
+    <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
+  </div>
+  <div class="third-main-grid">
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/1.webp">
+          <source type="image/png" srcset="./img/food-type/1.png">
+          <img class="lazyload" data-src="./img/food-type/1.png" alt="main course">
+        </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/2.webp">
+          <source type="image/png" srcset="./img/food-type/2.png">
+          <img class="lazyload" data-src="./img/food-type/2.png" alt="breakfast">
+        </picture>
+        </a>
+      </li>
+      
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/3.webp">
+          <source type="image/png" srcset="./img/food-type/3.png">
+          <img class="lazyload" data-src="./img/food-type/3.png" alt="Dessert menu">
+        </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/4.webp">
+          <source type="image/png" srcset="./img/food-type/4.jpg">
+          <img class="lazyload" data-src="./img/food-type/4.png" alt="Snack menu">
+        </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/5.webp">
+          <source type="image/png" srcset="./img/food-type/5.png">
+          <img class="lazyload" data-src="./img/food-type/5.png" alt="Salad menu">
+        </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#/foodish">
+        <picture>
+          <source type="image/webp" srcset="./img/food-type/6.webp">
+          <source type="image/png" srcset="./img/food-type/6.jpg">
+          <img class="lazyload" data-src="./img/food-type/6.png" alt="Drink menu">
+        </picture>
+        </a>
+      </li>
+     </div>
   </section>
 
   <section class="main-galery">
@@ -49,11 +108,36 @@ const Home = {
       <h1>Gallery</h1>
     </div>
     <div class="galery-grid">
-      <img class="galery-img-1" src="/img/food-3.png">
-      <img class="galery-img-2" src="/img/food-4.png">
-      <img class="galery-img-3" class="image-grid-col-2" src="/img/food-5.png">
-      <img class="galery-img-4" class="image-grid-col-2" src="/img/food-6.png">
-      <img class="galery-img-5" src="/img/food-7.png">
+    <picture class="galery-img-1">
+                <source media="(max-width: 650px)" srcset="./img/food-3-small.jpg"/>
+                <img 
+                    src='./img/food-3-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-2">
+                <source media="(max-width: 650px)" srcset="./img/food-4-small.jpg"/>
+                <img 
+                    src='./img/food-4-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-3 image-grid-col-2">
+                <source media="(max-width: 650px)" srcset="./img/food-5-small.jpg"/>
+                <img 
+                    src='./img/food-5-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-4 image-grid-col-2">
+                <source media="(max-width: 650px)" srcset="./img/food-6-small.jpg"/>
+                <img 
+                    src='./img/food-6-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
+      <picture class="galery-img-5">
+                <source media="(max-width: 650px)" srcset="./img/food-7-small.jpg"/>
+                <img 
+                    src='./img/food-7-large.jpg' 
+                    alt="Kumpulan buah dan sayuran"></img>
+            </picture>
     </div>
   </section>
         `;

@@ -1,16 +1,314 @@
-@media screen and (max-width: 550px) {
-    .app-bar .app-bar__brand h1 {
+@media screen and (max-width: 1200px) {
+    main .second-main {
+        align-items: center;
+        text-align: center;
+    }
+
+    main .second-main .tagline-why {
+        flex-direction: column;
+    }
+
+    main .second-main .tagline-why img {
+        margin: 0;
+        margin-bottom: 24px;
+        height: 50%;
+    }
+
+    main .third-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main .third-main .tagline-heading {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .about-foodintake {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-foodintake div {
+        margin: 24px 0px;
+        padding: 0px;
+        width: 80%;
+    }
+
+    .about-foodintake div img {
+        max-width: 320px;
+        width: 80%;
+    }
+
+    filter-menu {
+        display: none;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        position: fixed;
+        z-index: 9999;
+        padding-top: 30px;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .food-content {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    search-bar {
+        max-height: 90px;
+        padding: 0;
+    }
+
+    .show-filter {
+        display: block;
+        margin-bottom: 35px;
+    }   
+
+    .food-ingredient-image {
+        max-width: 400px;
+    }
+    
+    .food-equipments {
+        max-width: 430px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    main .first-main {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 64px 30px;
+    }
+
+    main .first-main .tagline-img {
+        margin-bottom: 50px ;
+    }
+
+    main .second-main {
+        padding: 30px 32px;
+    }
+
+    main .second-main .tagline-why, .second-main .tagline-heading h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .app-bar .app-bar__menu button{
+        display: flex;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        color: #5F7161;
+        font-size: 24px;
+        border-radius: 8px;
+    }
+
+    .app-bar .app-bar__navigation {
+        height: 90vh;
+    }
+
+    .app-bar .app-bar__navigation ul li a {
+        margin-bottom: 24px;
+    }
+
+    .food {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    main .main-galery .galery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .galery-img-1 {
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .galery-img-3 {
+        grid-row: span 2;
+    }
+
+    .galery-img-4 {
+        grid-row: span 1;
+    }
+
+    .team-profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-profile > *{
+        margin-bottom: 24px;
+    }   
+
+    .content-aside h5 {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .food {
+        margin: 0 auto;
+    }
+
+    .food-image {
+        max-width: 100%;
+    }
+
+    .food-fact {
+        padding: 20px;
+    }
+
+    .food-fact table {
+        align-items: center;
+    }
+
+    .food-nutrition-label img {
+        width: 85%;
+        max-width: 310px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main .first-main .tagline {
+        margin: 0;
+    }
+
+    main .first-main .tagline h1 {
+        font-size: 24pt;
+    }
+
+    main .first-main .tagline h4 {
         font-size: 14pt;
     }
 
-    .app-bar__brand img {
-        width: 24px;
-        margin-right: 10px;
+    main .first-main .tagline-img img {
+        width: 240px;
+        height: 240px;
     }
+
+    main .second-main .tagline-why .img-container img {
+        width: 240px;
+        height: 240px;
+        justify-content: center;
+        margin: auto 0;
+        margin-bottom: 24px;
+    }
+
+    main .second-main .tagline-heading h1, main .third-main .tagline-heading h1, main .main-galery {
+        font-size: 20pt;
+    }
+
+    main .second-main {
+        background-image: url('../public/img/background-tagline-why-small.jpg');
+    }
+
+    main .second-main .tagline-why p {
+        font-size: 11pt;
+        text-align: left;
+    }
+
+    main .second-main, main .third-main  {
+        padding: 40px 30px;
+    }
+
+    main .third-main .third-main-grid {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .main-galery {
+        padding: 0;
+    }
+
+    main .main-galery .galery-grid {
+        padding: 0 16px;
+        margin-bottom: 40px;
+    }
+
+    .about-team {
+        padding: 32px;
+    }
+
+    .team-description {
+        text-align: left;
+    }
+
+    footer .first-footer {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 40px 30px;
+    }
+
+    footer .first-footer .footer-header h1 {
+        font-size: 24px
+    }
+
+    footer div h1 {
+        font-size: 18px;
+    }
+
+    footer section .footer-address p {
+        font-size: 14px;
+    }
+
+    .aside-food-item li {
+        font-size: 9pt;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main .first-main .tagline h1 {
+        font-size: 22pt;
+    }
+
+    main .first-main .tagline h2 {
+        font-size: 16pt;
+    }
+
+    main .first-main .tagline h4 {
+        font-size: 11pt;
+    }
+
+    main .third-main .third-main-grid {
+        padding: 0;
+    }
+
+    .app-bar .app-bar__brand h1 {
+        font-size: 17pt;
+    }
+
+    .app-bar__brand img {
+        width: 28px;
+        margin-right: 7px;
+    }
+
+    .foodish-continer {
+        gap: 0
+    }
+        
 
     .content {
         margin: 10px 0;
     }
+    
 
     .detail-page, .content-aside {
         background-color: #f1f1f1;
@@ -20,6 +318,8 @@
     
     .show-filter {
         font-size: 10pt;
+        margin-bottom: 30px;
+        margin-top:  10px;
     }
 
     .foodish-continer {
@@ -28,7 +328,7 @@
 
     .foods {
         grid-template-columns: repeat(2, 1fr);
-        gap: 5px;        
+        gap: 8px;  
     }
 
     .food, .similar-food, .video-similar-food {
@@ -36,12 +336,14 @@
     }
 
     .food li, .food p, .content-aside p {
-        font-size: 9pt;
+        font-size: 10pt;
     }
 
     .food-result-message {
         font-size: 12pt;
         margin: 0;
+        padding-bottom: 18px;
+        background-color: #f2f2f2;
     }
 
     .food-content {
@@ -57,15 +359,15 @@
     .food-item-title {
         padding: 10px 15px;
         margin: 0;
-        height: 30px;
+        height: 52px;
     }
 
     .food-item-title a {
-        font-size: 10pt;
+        font-size: 10.5pt;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2; 
+        -webkit-line-clamp: 3; 
         -webkit-box-orient: vertical;
     }
 
@@ -84,7 +386,7 @@
     }
 
     .food-item-info ul li {
-        font-size: 8pt;
+        font-size: 9pt;
         margin: 0;        
         display: inline;
         text-align: left;
@@ -126,8 +428,9 @@
     .pagination button {
         color: black;
         float: left;
-        padding: 5px 18px;
-        font-size: 10pt;
+        font-size: 11pt;
+        padding: 10px 16px;
+        border: 1px solid #d3d3d3;
     }
 
     .bookmark-continer {
@@ -135,12 +438,16 @@
     }
 
     .bookmark-continer h2 {
-        font-size: 14pt;
+        font-size: 15pt;
         margin: 30px auto;
     }
 
+    .bookmark-continer h4 {
+        font-size: 11pt;
+    }
+
     .bookmark-continer .icon-title {
-        font-size: 12pt;
+        font-size: 13pt;
     }
 
     .bookmark-content {
@@ -150,6 +457,7 @@
 }
 
 @media screen and (min-width: 550px) {
+    
     .foods {
         grid-template-columns: repeat(2, 1fr);
     } 
@@ -180,72 +488,6 @@
     }
 }
 
-@media screen and (max-width: 650px) {
-    main .first-main .tagline h1 {
-        font-size: 32px;
-    }
-
-    main .first-main .tagline h4 {
-        font-size: 16px;
-    }
-
-    main .first-main .tagline-img img {
-        width: 240px;
-        height: 240px;
-    }
-
-    main .second-main .tagline-why .img-container img {
-        width: 240px;
-        height: 240px;
-        justify-content: center;
-        margin: auto 0;
-        margin-bottom: 24px;
-    }
-
-    main .second-main .tagline-why p {
-        font-size: 16px;
-        text-align: left;
-    }
-
-    main .main-galery {
-        padding: 0;
-    }
-
-    main .main-galery .galery-grid {
-        padding: 0 16px;
-        margin-bottom: 40px;
-    }
-
-    .about-team {
-        padding: 32px;
-    }
-
-    .team-description {
-        text-align: left;
-    }
-
-    footer .first-footer {
-        grid-template-columns: 1fr;
-        gap: 32px
-    }
-
-    footer .first-footer .footer-header h1 {
-        font-size: 24px
-    }
-
-    footer div h1 {
-        font-size: 18px;
-    }
-
-    footer section .footer-address p {
-        font-size: 14px;
-    }
-
-    .aside-food-item li {
-        font-size: 9pt;
-    }
-}
-
 @media screen and (min-width: 650px) {
     main .second-main .tagline-why .img-container img {
         justify-content: center;
@@ -262,32 +504,9 @@
     }
 }
 
-@media screen and (max-width: 800px) {
-    .food {
-        margin: 0 auto;
-    }
-
-    .food-image {
-        max-width: 90%;
-    }
-
-    .food-fact {
-        padding: 20px;
-    }
-
-    .food-fact table {
-        align-items: center;
-    }
-
-    .food-nutrition-label img {
-        width: 85%;
-        max-width: 310px;
-    }
-}
-
 @media screen and (min-width: 800px) {
     .app-bar .app-bar__brand h1 {
-      font-size: 2em;
+      font-size: 1.5em;
     }
 
     .foods {
@@ -307,69 +526,10 @@
     }
 }
 
-@media screen and (max-width: 850px) {
-    main .main-galery .galery-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 200px;
-    }
-
-    .galery-img-1 {
-        grid-row: span 1;
-        grid-column: span 2;
-    }
-
-    .galery-img-3 {
-        grid-row: span 2;
-    }
-
-    .galery-img-4 {
-        grid-row: span 1;
-    }
-
-    .team-profile {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card-profile > *{
-        margin-bottom: 24px;
-    }   
-
-    .content-aside h5 {
-        font-size: 12pt;
-    }
-}
-
 @media screen and (min-width: 850px) {
     .foods {
         grid-template-columns: repeat(3, 1fr);
     } 
-}
-
-@media screen and (max-width: 950px) {
-    .app-bar .app-bar__menu button{
-        display: flex;
-        justify-content: center;
-        min-width: 44px;
-        min-height: 44px;
-        color: #5F7161;
-        font-size: 24px;
-        border-radius: 8px;
-    }
-
-    .app-bar .app-bar__navigation {
-        height: 90vh;
-    }
-
-    .app-bar .app-bar__navigation ul li a {
-        margin-bottom: 24px;
-    }
-
-    .food {
-        display: flex;
-        flex-direction: column;
-    }
-    
 }
 
 @media screen and (min-width: 950px) {
@@ -421,96 +581,12 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
-    main .first-main {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-        padding: 24px;
-    }
-
-    main .first-main .tagline-img {
-        margin-bottom: 24px ;
-    }
-
-    main .second-main {
-        align-items: center;
-        text-align: center;
-    }
-
-    main .second-main .tagline-why {
-        flex-direction: column;
-    }
-
-    main .second-main .tagline-why img {
-        margin: 0;
-        margin-bottom: 24px;
-        height: 50%;
-    }
-
-    .about-foodintake {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-foodintake div {
-        margin: 24px 0px;
-        padding: 0px;
-        width: 80%;
-    }
-
-    .about-foodintake div img {
-        max-width: 320px;
-        width: 80%;
-    }
-
-    filter-menu {
-        display: none;
-        grid-column-start: 1;
-        grid-column-end: 5;
-        position: fixed;
-        z-index: 9999;
-        padding-top: 30px;
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.4);
-    }
-
-    .food-content {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
-
-    search-bar {
-        max-height: 90px;
-        padding: 0;
-    }
-
-    .show-filter {
-        display: block;
-    }   
-
-    .food-ingredient-image {
-        max-width: 400px;
-    }
-    
-    .food-equipments {
-        max-width: 430px;
-    }
-}
-
 @media screen and (min-width: 1200px) {
     main .second-main .tagline-why .img-container img {
         margin-right: 80px;
     }
 
-    main .third-main {
+    /* main .third-main {
         padding: 50px 20px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -522,7 +598,7 @@
         bottom: 0;
         padding: 100px 30px 0 30px;
         text-align: left;
-    }
+    } */
 
     footer .first-footer {
         grid-template-columns: repeat(4, 1fr);
@@ -540,24 +616,7 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
-    main .third-main {
-        max-width: 1050px;
-        margin: 0 auto;
-    }
-}
-
 @media screen and (min-width: 1500px) {
-    main .third-main {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 50px 100px;
-    }
-
-    main .third-main .food-type-text {
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
     .foods {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -572,6 +631,7 @@
         gap: 0;
     }
 
+    /* detail food */
     .detail-page {
         background-color: #f1f1f1;
         margin: 0;

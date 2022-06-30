@@ -6,8 +6,8 @@ const Bookmark = {
     return `
     <div class="bookmark-continer">
       <h2><i class="fa-solid fa-bookmark icon-title"></i> Bookmarked Food</h2>
+      <div class="bookmark-message"></div>
         <div class="food-content bookmark-content">
-          <div id="message" class="food-result-message"></div>
           <div class="food-content-item">
           <div id="foods" class="foods">
             ${createSkeletonBookmarkTemplate(8)}
@@ -20,9 +20,13 @@ const Bookmark = {
   async afterRender() {
     const foods = await FavoriteFoodIdb.getAllFoods();
     const foodsContainer = document.querySelector('#foods');
-    foods.forEach((food) => {
-      foodsContainer.innerHTML += createBookmarkItemTemplate(food);
-    });
+    if (foods === 0) {
+      document.querySelector('.bookmark-message').innerHTML += '<h4>Your Bookmark is Empty!</h4>';
+    } else {
+      foods.forEach((food) => {
+        foodsContainer.innerHTML += createBookmarkItemTemplate(food);
+      });
+    }
   },
 };
 

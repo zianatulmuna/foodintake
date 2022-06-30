@@ -42,6 +42,9 @@
 .food-title {
     grid-column-start: 1;
     grid-column-end: 3;
+    font-family: 'Comfortaa', cursive;
+    color: #5F7161;
+    margin-top: 20px;
 }
 
 .food-image {
@@ -257,6 +260,7 @@
  */
 
 .content-aside h4 {
+    font-size: 16pt;
     border-bottom: 1px solid #d3d3d3; 
     padding: 24px 24px 18px 24px;
     margin-bottom: 10px;

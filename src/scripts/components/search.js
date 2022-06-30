@@ -31,11 +31,11 @@ class SearchBar extends HTMLElement {
     .search__item input {
         width: 100%;
         align-items: center;
-        padding: 11px 15px;
+        padding: 15px 15px;
         border: none;
-        border-top-left-radius: 18px;
-        border-bottom-left-radius: 18px;
-        border: 2px solid #519259;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border: 1px solid #519259;
         max-height: 56px;
     }
 
@@ -50,16 +50,14 @@ class SearchBar extends HTMLElement {
     }
 
     .search__item button {
-        padding: 11.5px 20px;
+        padding: 15px 22px;
         background-color: #519259;
         border: none;
         color: white;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
         cursor: pointer;
         max-height: 60px;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
     .search__item button svg {
@@ -67,24 +65,24 @@ class SearchBar extends HTMLElement {
     }
 
     .search__item button:hover {
-        background-color: #519259;
+        background-color: #5F7161;
     }
 
     @media screen and (min-width: 550px) {
       .search__item {
         margin: auto 0;
         padding: 50px 10px;
-        min-width: 90%;
       }
 
       .search__item input {
         padding: 20px 30px;
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
+        border: 2px solid #519259;
       }
 
       .search__item button {
-        padding: 21px 30px;
+        padding: 21px 38px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
       }
@@ -98,38 +96,25 @@ class SearchBar extends HTMLElement {
       }
     }
 
-   
-
     @media screen and (min-width: 650px) {
       .search__item {
         margin: 0 auto;
-        padding: 50px;
-        min-width: 80%;
-      }
-    }
-
-    @media screen and (min-width: 850px) {
-      .search__item {
-        padding: 50px;
-        width: 60%;
+        max-width: 600px;
       }
     }
 
     @media screen and (min-width: 1200px) {
       .search__item {
         margin: 0 auto;
-        padding: 50px;
+        max-width: 65%;
       }
 
-      .search__item button {
-        padding: 20px 50px;
-      }
 
     }
        </style>
         <div class="search__continer">
         <form class="search__item">
-          <input id="searchElement" type="text" placeholder="Search food recipe and information, e.g Pasta">
+          <input id="searchElement" type="text" placeholder="Search food information, e.g Pasta">
           <button id="searchButtonElement" type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path fill="#fff" d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51
           99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62
