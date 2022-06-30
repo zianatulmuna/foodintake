@@ -1,6 +1,10 @@
 # FoodIntake
 
 # Authors
+- [@zianatulmuna](https://www.linkedin.com/in/zianatul-muna)
+- [@AnantaAlwy](https://www.linkedin.com/in/ananta-alwy/)
+- [@Arif](https://www.linkedin.com/in/muh-arif-1254b619b)
+- [@yusran](https://www.linkedin.com/in/andi-yusran/)
 
 # Team
 
