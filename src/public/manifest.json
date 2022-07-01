@@ -8,8 +8,14 @@
   "theme_color": "#6D8B74",
   "icons": [
     {
-        "src": "/icon/foodintake-38x38.png",
-        "sizes": "38x38",
+        "src": "/icon/foodintake-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-32x32.png",
+        "sizes": "32x32",
         "type": "image/png",
         "purpose": "any maskable"
     },
@@ -32,8 +38,26 @@
         "purpose": "any maskable"
     },
     {
+        "src": "/icon/foodintake-76x76.png",
+        "sizes": "76x76",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
         "src": "/icon/foodintake-96x96.png",
         "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-114x114.png",
+        "sizes": "114x114",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-120x120.png",
+        "sizes": "120x120",
         "type": "image/png",
         "purpose": "any maskable"
     },
@@ -52,6 +76,12 @@
     {
         "src": "/icon/foodintake-152x152.png",
         "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "/icon/foodintake-180x180.png",
+        "sizes": "180x180",
         "type": "image/png",
         "purpose": "any maskable"
     },
