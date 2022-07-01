@@ -4,7 +4,7 @@ main h1 {
 
 main .first-main {
     display:flex;
-    padding: 64px;
+    padding: 72px 64px;
     margin: 0 auto;
     background-color: #fafafa;
     justify-content: space-evenly;
@@ -174,14 +174,6 @@ main .third-main .tagline-heading {
     margin-right: 50px;
 }
 
-<<<<<<< HEAD
-=======
-main .third-main .tagline-heading {
-    text-align: left;
-    margin-right: 50px;
-}
-
->>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
 main .third-main .tagline-heading h1 {
     font-size: 38px;
     color: #5F7161;
@@ -191,7 +183,6 @@ main .third-main .tagline-heading h1 {
 
 main .third-main .tagline-heading h1 span {
     color: #CC704B;
-<<<<<<< HEAD
 }
 
 main .third-main-grid {
@@ -202,18 +193,6 @@ main .third-main-grid {
     margin: 0px auto;
 }
 
-=======
-}
-
-main .third-main-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    margin: 0px auto;
-}
-
->>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
 main .third-main-grid li {
     list-style: none;
     border-radius: 20px;
@@ -233,7 +212,6 @@ main .third-main li:hover {
     background-color:#6D8B74;
 }
 
-<<<<<<< HEAD
 main .fourth-main {
     padding: 50px 68px;
     display: flex;
@@ -295,5 +273,3 @@ main .fifth-main span {
     color: #CC704B;
 }
 
-=======
->>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76

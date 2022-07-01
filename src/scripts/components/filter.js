@@ -373,11 +373,7 @@ class FilterMenu extends HTMLElement {
                           </div>
                           <div class="ketogenic-filter">
                               <input type="checkbox" name="diet" value="ketogenic" id="chk-ketogenic">
-<<<<<<< HEAD
                               <label for="chk-ketogenic">Ketogenic</label>
-=======
-                              <label for="chk-ketogenic">Gluten Free</label>
->>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
                           </div>
                           <div class="paleo-filter">
                               <input type="checkbox" name="diet" value="paleo" id="chk-paleo">

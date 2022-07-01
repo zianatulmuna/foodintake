@@ -101,22 +101,19 @@ const Home = {
         </a>
       </li>
      </div>
-<<<<<<< HEAD
   </section>
 
   <section class="fourth-main">
     <div class="tagline-heading">
-      <h1>Personalisasikan Dengan <span>Filter Nutrisi</span></h1>
+      <h1>Personalisasikan Dengan <br><span>Filter Nutrisi</span></h1>
       <p>Pastikan kamu memilih makanan sesuai dengan kebutuhan nutrisi ya!</p>
     </div>
     <picture>
                 <source media="(max-width: 650px)" srcset="./img/information-small.jpg"/>
                 <img 
-                    src='./img/information-large.jpg' 
+                    src='./img/information-large.png' 
                     alt="Food Information"></img>
     </picture>    
-=======
->>>>>>> b5d5aa789cb5845655f9308cc77aefa9f6717b76
   </section>
 
   <section class="fifth-main">
