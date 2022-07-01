@@ -51,7 +51,34 @@ https://github.com/zianatulmuna/foodintake
 # Project Resource
 
 Berikut Resources yang dibutuhkan dalam pengembangan Website FoodIntake :
-
+<ul>
+  <li>Bahasa Pemograman :</li>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+    </ul>
+  <li>API :</li>
+    <ul>
+      <li>Sumber API : https://spoonacular.com/food-api</li>
+      <li>Pengetesan API : POSTMAN</li>
+    </ul>
+  <li>Library :</li>
+    <ul>
+      <li>Node Package Manager</li>
+      <li>Eslint : airbnb</li>
+    </ul>
+  <li>Deploy :</li>
+    <ul>
+      <li>Vercel</li>
+    </ul>
+  <li>Manajemen Proyek :</li>
+    <ul>
+      <li>Google Meet</li>
+      <li>WhatssApp</li>
+      <li>GitHub</li>
+    </ul>
+</ul>
 
 #  Risk and Issue Management Plan: 
 
@@ -70,13 +97,11 @@ Perubahan Agenda.  | Adanya agenda yang tidak terduga di luar agenda projek yang
 Dana  | Membutuhkan dana untuk deployment atau tools yang digunakan pada website yang dibuat.  | Website tidak dapat berjalan sesuai harapan.  | Mencari sebuah layanan hosting dan tools gratis yang tersedia.
 Ujian  | Adanya ujian dari kampus  | Menghambat pembuatan website  | Mempersiapkan Materi Kuliah
 
-
-
-
-
-
-
-
-
-
-
+# Daftar Pustaka
+<ul>
+  <li><p>Halodoc.com(2020). "Ini yang Terjadi Jika Tubuh Kurang Nutrisi". Diakses pada 13 Mei 2022, dari https://www.halodoc.com/artikel/ini-yang-terjadi-jika-tubuh-kurang-nutrisi.</p></li>
+  <li><p>Nakita.grid.id(2022). “Moms Wajib Baca! Ini Manfaat Jika Kebutuhan Nutrisi Anak Terpenuhi dengan Baik sejak Dini menurut Dokter Spesialis Anak”. Diakses pada 13 Mei 2022, dari https://nakita.grid.id/read/023278783/moms-wajib-baca-ini-manfaat-jika-kebutuhan-nutrisi-anak-terpenuhi-dengan-baik-sejak-dini-menurut-dokter-spesialis-anak.</p></li>
+  <li><p>Hutasoit, Sisca Verawaty. 2016. "Asuhan Keperawatan dengan Prioritas Masalah Gangguan Pemenuhan Nutrisi : Kurang dari Kebutuhan Tubuh di RSUD dr. Pirngadi Medan". Fakultas Keperawatan,Universitas Sumatera Utara. 
+https://repositori.usu.ac.id/bitstream/handle/123456789/17951/132500112.pdf?sequence=1&isAllowed=y
+</p></li>
+</ul>
