@@ -42,7 +42,7 @@ const Home = {
   <section class="third-main">
   <div class="tagline-heading">
     <h1>Rekomendasi Berdasarkan<br><span>Tipe Makanan</span></h1>
-    <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
+    <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini. <br>Keep healthy!</p>
   </div>
   <div class="third-main-grid">
       <li>
@@ -110,8 +110,8 @@ const Home = {
     </div>
     <picture>
                 <source media="(max-width: 650px)" srcset="./img/information-small.jpg"/>
-                <img 
-                    src='./img/information-large.png' 
+                <img class="lazyload"
+                    data-src='./img/information-large.png' 
                     alt="Food Information"></img>
     </picture>    
   </section>
@@ -125,7 +125,8 @@ const Home = {
     <picture>
                 <source media="(max-width: 650px)" srcset="./img/nutrition-label-small.jpg"/>
                 <img 
-                    src='./img/nutrition-label-large.jpg' 
+                    class="lazyload"
+                    data-src='./img/nutrition-label-large.jpg' 
                     alt="Lutrition Label"></img>
     </picture>    
   </section>

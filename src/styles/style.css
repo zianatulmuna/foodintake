@@ -3,6 +3,7 @@
 @import url('./components/about.css');
 @import url('./components/foodish.css');
 @import url('./components/detail.css');
+@import url('./components/bookmark.css');
 
 * {
     padding: 0;

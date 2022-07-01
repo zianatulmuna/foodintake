@@ -1,31 +1,31 @@
-/* eslint-disable radix */
 import CONFIG from '../../globals/config';
 
 const createFoodItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
-    <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
-    <div class="food-item-info">
-      <ul>
-          <li><i class="fa-solid fa-star icon"></i>${food.healthScore}%</li>
-          <li class="food-item-info-text">Healthy</li>
-      </ul>
-      <ul class="food-item-info-mid">
-        <li><i class="fa-brands fa-nutritionix icon"></i> 
-            ${food.nutrition.nutrients
+    <div class="food-item-main">
+      <div class="food-item-info">
+        <ul>
+            <li><i class="fa-solid fa-star icon"></i>${food.healthScore}%</li>
+            <li class="food-item-info-text">Healthy</li>
+        </ul>
+        <ul class="food-item-info-mid">
+          <li><i class="fa-brands fa-nutritionix icon"></i> 
+              ${food.nutrition.nutrients
     .filter((nutrient) => nutrient.name === 'Calories')
     .map((nutrient) => `
-                      ${parseInt(nutrient.amount)}
-                  `).join('')}</li>
-        <li class="food-item-info-text">Calories</li> 
-      </ul>
-      <ul>
-        <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
-        <li class="food-item-info-text">Servings</li>
-      </ul>
-    </div> 
+                        ${parseInt(nutrient.amount)}
+                    `).join('')}</li>
+          <li class="food-item-info-text">Calories</li> 
+        </ul>
+        <ul>
+          <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
+          <li class="food-item-info-text">Servings</li>
+        </ul>
+      </div> 
+      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
       <p class="food-item-summary">${food.summary}</p>
-
+    </div>
   </div>
 `;
 
@@ -164,9 +164,9 @@ const createVideoFoodItemTemplate = (video) => `
 const createBookmarkItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
-    <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
+    <div class="food-item-main">
     <div class="food-item-info">
-      <ul>
+      <ul class="food-item-info-first">
           <li><i class="fa-solid fa-star icon"></i> ${food.healthScore}%</li>
           <li class="food-item-info-text">Health</li>
       </ul>
@@ -175,7 +175,9 @@ const createBookmarkItemTemplate = (food) => `
         <li class="food-item-info-text">Servings</li>
       </ul>
     </div> 
+      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
       <p class="food-item-summary">${food.summary}</p>
+    </div>
   </div>
 `;
 
@@ -192,10 +194,10 @@ const createSavedButtonTemplate = () => `
 `;
 
 const createSkeletonItemTemplate = (count) => {
-  const template = '';
+  let template = '';
 
   for (let i = 0; i < count; i++) {
-    `
+    template += `
     <div class="food-item">
     <img class="food-item-image skeleton lazyload" data-src="./etc/placeholder.png" alt="skeleton">  
       <div class="food-item-info">

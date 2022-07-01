@@ -200,15 +200,18 @@ main .third-main-grid li {
     margin: 0px auto;
     max-width: 400px; 
     text-align: center;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    background-color: #c2b098;
 }
 
 main .third-main-grid img {
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
+    padding: 3px 3px 10px 3px;
 }
 
-main .third-main li:hover {
+main .third-main-grid li:hover {
     background-color:#6D8B74;
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 import SpoonacularSource from '../../data/food-source';
 import { createFoodItemTemplate, createSkeletonItemTemplate } from '../templates/template-creator';
 import DrawerInitiator from '../../utils/drawer-initiator';

@@ -69,7 +69,71 @@ filter-menu.open {
     width: 100%;
 }
 
+
 .food-item-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 10pt;
+    /* padding: 12px 10px; */
+    padding: 0 10px;
+    padding-top: 18px;
+    margin: 0;
+}
+
+.food-item-info ul {
+    height: 40px;
+    margin: 0;
+}
+
+.food-item-info-mid {
+    border-right: 1px solid #EFEAD8;
+    border-left: 1px solid #EFEAD8;
+}
+
+.food-item-info ul:first-child  .icon{
+    color: #F0BB62;
+}
+
+.food-item-info .icon {
+    color: #9FC088;
+    margin-right: 4px;
+}
+
+.food-item-info ul:last-child  .icon{
+    color: #CC704B;
+}
+
+.food-item-info-text {
+    font-size: 9pt;
+}
+
+.food-item-title {
+    padding: 20px 18px;
+    padding-bottom: 0;
+    /* height: 70px; */
+    /* margin-bottom: 30px; */
+}
+
+.food-item-title a {
+    color: #000;
+    font-size: 14pt;
+    min-height: 44px;
+    min-width: 44px;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.food-item-title a:hover {
+    color: #be603b;
+}
+
+
+/* .food-item-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
@@ -126,7 +190,7 @@ filter-menu.open {
 
 .food-item-title a:hover {
     color: #be603b;
-}
+} */
 
 .food-item-summary {
     padding: 0 18px;
@@ -146,10 +210,11 @@ filter-menu.open {
     padding: 30px;
 } 
 
+
 /*
  * bookmark-template
  */
-.bookmark-continer {
+ .bookmark-continer {
     margin: 56px 86px;
 }
 
@@ -174,7 +239,7 @@ filter-menu.open {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.bookmark-continer .food-item-info-icon {
+.bookmark-continer .food-item-info-first {
     border-right: 1px solid #EFEAD8;
 }
 
@@ -182,7 +247,6 @@ filter-menu.open {
     font-size: 26px;
     color: #5F7161;
 }
-
 
 /*
  * others

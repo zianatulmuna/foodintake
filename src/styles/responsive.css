@@ -27,6 +27,7 @@
 
     main .fourth-main img {        
         max-width: 600px; 
+        width: 100%;
     }
 
     main .fourth-main {
@@ -344,8 +345,16 @@
         font-size: 11pt;
     }
 
+    main .third-main .tagline p br {
+        display: none;
+    }
+
     main .third-main .third-main-grid {
         padding: 0;
+    }
+
+    main .fourth-main {
+        padding: 50px 20px;
     }
 
     .app-bar .app-bar__brand h1 {
@@ -386,6 +395,8 @@
         gap: 8px;  
     }
 
+    
+
     .food, .similar-food, .video-similar-food {
         border-radius: 0;
     }
@@ -409,6 +420,11 @@
     .food-content-item {
         max-width: 400px;
         margin: 0 auto;
+    }
+
+    .food-item-main {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .food-item-title {
