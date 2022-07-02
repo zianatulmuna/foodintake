@@ -63,7 +63,7 @@ https://github.com/zianatulmuna/foodintake
 <a id="7"></a>
 ## Slide Presentation Link:
 
-https://drive.google.com/file/foodintake
+https://drive.google.com/file/d/14flUMbts1-lM9JoZvpIT-eXE3cZoDaWM/view?usp=sharing
 
 <a id="8"></a>
 ## Video Demo Aplikasi Link :
