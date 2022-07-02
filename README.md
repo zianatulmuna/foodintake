@@ -1,12 +1,39 @@
 # FoodIntake
+<br />
+<p align="center">
+  <img src="./src/public/foodintake.png" alt="Logo" width="80" height="80">
+  <h3 align="center">FoodIntake</h3>
+</p>
 
-# Authors
+<a id="toc"></a>
+
+# Table of Content :
+0. ##### [Table of Content](#toc)
+1. ##### [Authors](#1)
+2. ##### [Team](#2)
+3. ##### [Tema](#3)
+4. ##### [Judul](#4)
+5. ##### [User-accessible Link](#5)
+6. ##### [Github Repo Link](#6)
+7. ##### [Slide Presentation Link](#7)
+8. ##### [Video Demo](#8)
+9. ##### [About FoodIntake](#9)
+10. ###### [Background](#10)
+12. ###### [Project Resource](#11)
+13. ###### [Risk and Issue Management Plan](#12)
+14. ###### [Daftar Pustaka](#13)
+
+<a id="1"></a>
+
+## Authors
 - [@zianatulmuna](https://www.linkedin.com/in/zianatul-muna)
 - [@AnantaAlwy](https://www.linkedin.com/in/ananta-alwy/)
 - [@Arif](https://www.linkedin.com/in/muh-arif-1254b619b)
 - [@yusran](https://www.linkedin.com/in/andi-yusran/)
 
-# Team
+
+<a id="2"></a>
+## Team
 
 Team ID : CPSG-70
 Nama Anggota Kelompok :
@@ -17,28 +44,39 @@ Nama Anggota Kelompok :
   <li>F2375D367 - Muh. Arif</li>
 </ol>
 
+<a id="3"></a>
 ## Tema : Book, Reference, and Education
 
+<a id="4"></a>
 ## Judul : Food Intake - Sistem Informasi Produk dan Resep Makanan Untuk Referensi Asupan Nutrisi
 
+<a id="5"></a>
 ## User-accessible Link
 
 https://foodintake.vercel.app/
 
-## User Manual Guide
-
-
-
+<a id="6"></a>
 ## Github Repo Link
 
-https://github.com/zianatulmuna/foodintake 
+https://github.com/zianatulmuna/foodintake
 
+<a id="7"></a>
 ## Slide Presentation Link:
 
+https://drive.google.com/file/foodintake
+
+<a id="8"></a>
+## Video Demo Aplikasi Link :
+
+https://youtu.be/m3ewIB_K9D0
+
+
+<a id="9"></a>
 # About FoodIntake
 
 **FoodIntake** adalah sebuah website yang dibangun untuk memberikan informasi mengenai resep dan detail kandungan bahan dan produk makanan untuk membantu mengatur dan memenuhi kebutuhan nutrisi. Food Intake diharapkan mampu  membantu user merencanakan asupan makanan yang dibutuhkan.
 
+<a id="10"></a>
 # Background
 <p>Pola makan sehat saat ini semakin populer, namun masih banyak orang yang belum berhasil memenuhi kebutuhan nutrisi tubuh. Nutrisi berfungsi untuk membentuk dan memelihara jaringan tubuh, mengatur proses-proses dalam tubuh, sebagai sumber tenaga, serta untuk melindungi tubuh dari serangan penyakit. Kebutuhan nutrisi yang kurang dari kebutuhan tubuh adalah asupan nutrisi yang tidak cukup untuk memenuhi kebutuhan metabolik (Hutasoit, 2016).</p>
 <p>Kekurangan dan kelebihan nutrisi akan berbahaya untuk kesehatan, gejala kekurangan nutrisi yang paling umum adalah penurunan berat badan, mudah lelah, gusi, dan mulut yang sering mengalami luka, pipi dan mata terlihat cekung, mudah merasa kedinginan, dan berbagai penyakit lain (Halodoc, 2020).</p>
@@ -48,6 +86,7 @@ https://github.com/zianatulmuna/foodintake
 <p>Berdasarkan permasalahan tersebut, dibutuhkan sistem informasi yang dapat diakses dan digunakan dengan mudah mengenai detail kandungan nutrisi dari suatu makanan, dan memberikan fitur untuk merencanakan asupan makanan perhari atau perminggu. Untuk itu, dikembangkan solusi berupa Aplikasi Website “FoodIntake” untuk memberikan informasi mengenai resep dan detail kandungan bahan dan produk makanan untuk membantu mengatur dan memenuhi kebutuhan nutrisi.</p>
 <p>Website FoodIntake dibuat dengan memanfaatkan API dari Spoonacular dalam mendapatkan list data menu makanan. FoodIntake juga dibangun berdasarkan pembelajaran yang ada pada kelas expert dicoding.</p>
 
+<a id="11"></a>
 # Project Resource
 
 Berikut Resources yang dibutuhkan dalam pengembangan Website FoodIntake :
@@ -80,6 +119,8 @@ Berikut Resources yang dibutuhkan dalam pengembangan Website FoodIntake :
     </ul>
 </ul>
 
+
+<a id="12"></a>
 #  Risk and Issue Management Plan: 
 
 Berikut merupakan beberapa faktor yang dapat menggagalkan atau menunda pembuatan proyek website yang akan dibangun dan perencanaan bagaimana mengidentifikasi serta menyelesaikan isu yang mungkin terjadi selama pengerjaan proyek. 
@@ -97,6 +138,7 @@ Perubahan Agenda.  | Adanya agenda yang tidak terduga di luar agenda projek yang
 Dana  | Membutuhkan dana untuk deployment atau tools yang digunakan pada website yang dibuat.  | Website tidak dapat berjalan sesuai harapan.  | Mencari sebuah layanan hosting dan tools gratis yang tersedia.
 Ujian  | Adanya ujian dari kampus  | Menghambat pembuatan website  | Mempersiapkan Materi Kuliah
 
+<a id="13"></a>
 # Daftar Pustaka
 <ul>
   <li><p>Halodoc.com(2020). "Ini yang Terjadi Jika Tubuh Kurang Nutrisi". Diakses pada 13 Mei 2022, dari https://www.halodoc.com/artikel/ini-yang-terjadi-jika-tubuh-kurang-nutrisi.</p></li>
