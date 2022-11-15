@@ -688,6 +688,11 @@
 }
 
 @media screen and (min-width: 1300px) {
+    body {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     main .fifth-main {
        padding: 50px 70;
     }
@@ -714,7 +719,7 @@
     .detail-page {
         background-color: #f1f1f1;
         margin: 0;
-        padding: 50px 80px;
+        padding: 50px;
     }
 
     .food {
