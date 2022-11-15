@@ -687,9 +687,9 @@
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1350px) {
     body {
-        max-width: 1400px;
+        max-width: 1600px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -720,6 +720,9 @@
         background-color: #f1f1f1;
         margin: 0;
         padding: 50px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .food {
@@ -730,13 +733,17 @@
         grid-template-columns: 2fr 3fr; 
     }
 
+    .content-aside {
+        max-width: 300px;
+    }
+
     .content-aside h5 {
         font-size: 12pt;
     }
 
-    .food-trivia, .similar-food {
+    /* .food-trivia, .similar-food {
         min-width: 350px;
-    }
+    } */
 
     .video-food-item-thumbnail {
         width: 100%;
