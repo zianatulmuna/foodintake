@@ -183,9 +183,19 @@ const Foodish = {
     };
 
     const onButtonSearchClicked = async () => {
-      const filterLine = `query=${searchElement.value}&`;
-      const message = `Results for ${searchElement.value.charAt(0).toUpperCase()}${searchElement.value.slice(1)}`;
-      setFilteredFoods(filterLine, message);
+      const emptyMessage = filterElement.value.messageCon;
+      const seachValue = searchElement.value;
+
+      if (seachValue.length <= 2) {
+        foodResultMessage('Please enter a word');
+        emptyMessage.classList.remove('show-style');
+      } else {
+        emptyMessage.classList.add('show-style');
+
+        const filterLine = `query=${searchElement.value}&`;
+        const message = `Results for ${searchElement.value.charAt(0).toUpperCase()}${searchElement.value.slice(1)}`;
+        setFilteredFoods(filterLine, message);
+      }
     };
 
     const onButtonFilterSearchClicked = async () => {
