@@ -370,6 +370,7 @@
 
 .video-aside {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .video-similar-food {

@@ -109,7 +109,7 @@ const Home = {
       <p>Pastikan kamu memilih makanan sesuai dengan kebutuhan nutrisi dan mengatur pola makan yang sesuai. 
       Tujuannya adalah untuk meningkatkan kualitas hidup, mencegah komplikasi, mempertahankan gula darah, dan mempertahankan berat badan ideal.</p>
       <p>Sebelum memilih makananmu, yuk cek kebutuhan kalori terlebih dahulu!</p>
-      <button onclick="window.open("https://gendhismanis.id/kalkulatorkalori.html", "_blank")">Kalkulator Kalori</button>
+      <button onclick="window.open('https://gendhismanis.id/kalkulatorkalori.html', '_blank')">Kalkulator Kalori</button>
     </div>
     <picture>
                 <source media="(max-width: 650px)" srcset="./img/information-small.jpg"/>
