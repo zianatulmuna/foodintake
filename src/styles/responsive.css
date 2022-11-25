@@ -26,7 +26,7 @@
     }
 
     main .fourth-main img {        
-        max-width: 600px; 
+        max-width: 420px; 
         width: 100%;
     }
 
@@ -36,6 +36,10 @@
 
     main .fourth-main .tagline-heading br {
         display: none;
+    }
+
+    main .fourth-main button {
+        margin-bottom: 36px;
     }
 
     .about-foodintake {
@@ -655,6 +659,10 @@
 @media screen and (min-width: 1200px) {
     main .second-main .tagline-why .img-container img {
         margin-right: 80px;
+    }
+
+    main .fourth-main .tagline-heading {
+        max-width: 70%;
     }
 
     /* main .third-main {

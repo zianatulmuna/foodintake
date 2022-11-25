@@ -112,7 +112,7 @@ main .second-main .tagline-why .img-container img {
 
 main .second-main .tagline-why p {
     line-height: 2;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 main .main-galery{
@@ -167,6 +167,7 @@ main .third-main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    font-size: 16px;
 }
 
 main .third-main .tagline-heading {
@@ -223,14 +224,14 @@ main .fourth-main {
     text-align: center;
     align-items: center;
     background-color: #efe3d2;
-    font-size: 14pt;
+    font-size: 16px;
 }
 
 main .fourth-main img {
     width: 100%;
     object-fit: cover;
     margin: 0px auto;
-    max-width: 580px; 
+    max-width: 520px; 
 }
 
 main .fourth-main .tagline-heading h1 {
@@ -242,6 +243,22 @@ main .fourth-main .tagline-heading h1 {
 
 main .fourth-main .tagline-heading h1 span {
     color: #CC704B;
+}
+
+main .fourth-main button {
+    background-color: #5F7161;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: #EFEAD8;
+    min-width: 44px;
+    min-height: 44px;
+    margin-top: 10px;
+    border-color: transparent;
+    font-size: 16px;
+}
+
+main .fourth-main button:hover {
+    background-color: #6D8B74;
 }
 
 main .fifth-main {
@@ -256,6 +273,7 @@ main .fifth-main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
+    font-size: 16px;
 }
 
 main .fifth-main img {
