@@ -357,6 +357,10 @@
         padding: 0;
     }
 
+    main .third-main-grid img {
+        max-width: 260px;
+    }
+
     main .fourth-main {
         padding: 50px 15px;
     }

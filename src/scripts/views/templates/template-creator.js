@@ -146,7 +146,7 @@ const createSimilarFoodItemTemplate = (food) => `
 
 const createVideoFoodItemTemplate = (video) => `
   <div class="aside-food-item video-aside">
-    <a class="video-food-item" href="https://www.youtube.com/watch?v=${video.youTubeId}" terget="_blank">
+    <a class="video-food-item" window.open("https://www.youtube.com/watch?v=${video.youTubeId}", "_blank")>
     <img class="video-food-item-thumbnail lazyload" data-src="${video.thumbnail}" alt="${food.shortTitle}">
     <div class="video-food-item-content">
         <h5 class="video-food-item-title">${video.shortTitle}</h5>
