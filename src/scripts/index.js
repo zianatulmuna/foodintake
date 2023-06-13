@@ -21,3 +21,7 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
+
+window.onhashchange = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
